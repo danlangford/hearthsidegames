@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 88.455 106.028" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="half" stroke="none" fill="black" transform="translate(-25,-35)" d=" M 47 0 L 47 66 Q 47 67 46 67 L 0 67 Q 0 70 3 70 L 47 70 Q 50 70 50 67 L 50 3 Q 50 0 47 0 "/>
+    <path id="serif" stroke="none" fill="black" transform="translate(-25,-35)" d=" M 47 4 Q 47 3 46 3 L 46 0 L 50 4 "/>
+    <g id="half-serif">
+      <path stroke="none" fill="black" transform="matrix(1, 0, 0, 1, -25, -35)" d=" M 47 0 L 47 66 Q 47 67 46 67 L 0 67 Q 0 70 3 70 L 47 70 Q 50 70 50 67 L 50 3 Q 50 0 47 0 "/>
+      <path stroke="none" fill="black" transform="matrix(1, 0, 0, 1, -25, -35)" d=" M 47 4 Q 47 3 46 3 L 46 0 L 50 4 "/>
+    </g>
+    <path id="flame" transform="scale(.1)" d="M 0 220 C 75 220 175 165 175 75 C 175 30 160 -10 135 -50 C 130 70 13 57 0 190 C -25 150 -20 100 30 50 C 150 -50 60 -170 -30 -220 C -5 -45 -175 -67 -175 75 C -175 165 -90 220 0 220 Z " stroke="none" fill="black"/>
+  </defs>
+  <g id="group-1" transform="matrix(1, 0, 0, 1, 114.738922, 60.976971)">
+    <g id="group-2" transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, -70.511421, -16.448256)">
+      <g id="group-3">
+        <path transform="matrix(0.10000000149011612, 0, 0, 0.10000000149011612, 0, 0)" d="M 0 220 C 75 220 175 165 175 75 C 175 30 160 -10 135 -50 C 130 70 13 57 0 190 C -25 150 -20 100 30 50 C 150 -50 60 -170 -30 -220 C -5 -45 -175 -67 -175 75 C -175 165 -90 220 0 220 Z " stroke="none" fill="black"/>
+        <g>
+          <path stroke="none" fill="black" transform="matrix(1, 0, 0, 1, -25, -35)" d=" M 47 0 L 47 66 Q 47 67 46 67 L 0 67 Q 0 70 3 70 L 47 70 Q 50 70 50 67 L 50 3 Q 50 0 47 0 "/>
+          <path stroke="none" fill="black" transform="matrix(1, 0, 0, 1, -25, -35)" d=" M 47 4 Q 47 3 46 3 L 46 0 L 50 4 "/>
+        </g>
+        <g transform="matrix(-1, 1.2246467991473532e-16, -1.2246467991473532e-16, -1, 0, 0)">
+          <path stroke="none" fill="black" transform="matrix(1, 0, 0, 1, -25, -35)" d=" M 47 0 L 47 66 Q 47 67 46 67 L 0 67 Q 0 70 3 70 L 47 70 Q 50 70 50 67 L 50 3 Q 50 0 47 0 "/>
+          <path stroke="none" fill="black" transform="matrix(1, 0, 0, 1, -25, -35)" d=" M 47 4 Q 47 3 46 3 L 46 0 L 50 4 "/>
+        </g>
+      </g>
+      <g id="group-4">
+        <path stroke="none" fill="black" transform="matrix(1, 0, 0, 1, -19, -29)" d=" M 47 0 L 47 66 Q 47 67 46 67 L 0 67 Q 0 70 3 70 L 47 70 Q 50 70 50 67 L 50 3 Q 50 0 47 0 "/>
+        <path stroke="none" fill="black" transform="matrix(1, 0, 0, 1, -13, -23)" d=" M 47 0 L 47 66 Q 47 67 46 67 L 0 67 Q 0 70 3 70 L 47 70 Q 50 70 50 67 L 50 3 Q 50 0 47 0 "/>
+      </g>
+    </g>
+  </g>
+</svg>
