@@ -1,0 +1,109 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+.qr-form img {
+    filter: brightness(0) invert(1);
+}
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.qr-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    background: transparent;
+    border-bottom: 1px solid #eee;
+    padding: 8px 12px 8px 12px;
+    box-shadow: 0 2px 8px #0001;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.qr-form input {
+    font-size: 1.1em;
+    padding: 7px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    min-width: 180px;
+}
+.qr-form button {
+    font-size: 1.1em;
+    padding: 7px 18px;
+    border-radius: 6px;
+    background: #ffd27f;
+    border: none;
+    color: #222;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.qr-form button:hover {
+    background: #ffb700;
+}
+.gallery {
+    place-items: center;
+    min-height: calc(100vh - 80px);
+    align-content: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 18px;
+    padding: 18px;
+    box-sizing: border-box;
+}
+.tile {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+    max-height: calc(100vh - 110px);
+}
+.qr-visual {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    box-sizing: border-box;
+}
+.qr-visual::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px #0002;
+    z-index: -1;
+}
+.qr-visual canvas,
+.qr-visual img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+.qr-name {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8px 10px;
+    font-size: clamp(0.9rem, 2.2vw, 1.2rem);
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    max-height: 35%;
+    overflow: hidden;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0)
+    );
+    pointer-events: none;
+}

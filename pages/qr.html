@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearthside Games - QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./css/brands.min.css" />
+    <link rel="stylesheet" href="./css/solid.min.css" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+    <!-- QR Code Styling library -->
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0/lib/qr-code-styling.js"></script>
+    <link rel="stylesheet" href="qr.css">
+</head>
+<body>
+    <div class="container">
+        <form class="qr-form" id="qrForm" autocomplete="off">
+            <img src="flame-deck-compat.svg" alt="Hearthside Games Logo" style="height:38px;width:auto;margin-right:18px;vertical-align:middle;" />
+            <input type="url" id="qrUrl" placeholder="Paste URL here" required autofocus>
+            <input type="text" id="qrName" placeholder="Name (e.g. Event, Table)" required>
+            <button type="submit"><i class="fa-solid fa-qrcode" style="margin-right:6px;"></i>Generate QR</button>
+        </form>
+        <div class="gallery" id="gallery"></div>
+        <template id="tile-template">
+            <div class="tile">
+                <div class="qr-visual"></div>
+                <div class="qr-name"></div>
+            </div>
+        </template>
+    </div>
+    <script src="qr.js"></script>
+</body>
+</html>
