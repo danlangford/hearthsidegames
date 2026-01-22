@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearthside Games - Branding</title>
+    <style>
+        @font-face {
+            font-family: 'HearthLexendExaVF';
+            src: url('HearthLexendExaVF.ttf') format('truetype');
+        }
+
+        :root {
+            --charcoal: #1F1F1F;
+            --warm-gray: #A89F94;
+            --soft-sand: #F4E9D8;
+            --off-white: #FAF7F2;
+            --rich-amber: #B45102;
+            --bright-ember: #E6783B;
+            --clay-terracotta: #C55A2B;
+            --slate-blue: #4A5D68;
+            --olive-bronze: #6B5B3D;
+            --deep-wine: #6A2E1B;
+            --warm-gold: #D9A441;
+            --white: #FFFFFF;
+            --black: #000000;
+        }
+
+        body {
+            margin: 0;
+            background: #f6f3ef;
+            color: #2b2b2b;
+            font-family: 'HearthLexendExaVF', 'Trebuchet MS', sans-serif;
+            line-height: 1.35;
+        }
+
+        .page {
+            max-width: 980px;
+            margin: 24px auto 40px;
+            padding: 18px 22px 32px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 120px;
+            gap: 24px;
+        }
+
+        .section {
+            margin-bottom: 22px;
+        }
+
+        h1, h2 {
+            margin: 0 0 6px 0;
+            font-weight: 600;
+            color: #1e1e1e;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-size: 1.05rem;
+        }
+
+        .lead {
+            margin: 0 0 10px 0;
+            font-size: 0.95rem;
+            color: #3a3a3a;
+        }
+
+        .color-line {
+            margin: 3px 0;
+            font-size: 0.92rem;
+        }
+
+        .color-line span {
+            font-weight: 600;
+        }
+
+        .swatch-row {
+            display: flex;
+            gap: 6px;
+            margin: 10px 0 2px;
+        }
+
+        .swatch {
+            width: 42px;
+            height: 32px;
+            border: 1px solid #2c2c2c;
+        }
+
+        .palette-rail {
+            display: flex;
+            flex-direction: column;
+            height: 520px;
+            border-radius: 3px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset;
+        }
+
+        .rail-block {
+            flex: var(--weight, 8);
+        }
+
+        .rail-thin {
+            flex: var(--weight, 2);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: rgba(0, 0, 0, 0.08);
+            margin: 12px 0 16px;
+        }
+
+        @media (max-width: 760px) {
+            .page {
+                grid-template-columns: 1fr;
+            }
+
+            .palette-rail {
+                flex-direction: row;
+                height: 70px;
+            }
+
+            .rail-block {
+                flex: 1;
+                height: auto;
+            }
+
+            .rail-thin {
+                width: 10px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <section>
+            <div class="section">
+                <h1>Base Neutrals &mdash; Foundations &amp; Backgrounds</h1>
+                <p class="lead">Use for large areas, backgrounds, and to give your design breathing room.</p>
+                <p class="color-line"><span>Charcoal</span> &ndash; #1F1F1F Dark neutral for depth, softer than black.</p>
+                <p class="color-line"><span>Warm Gray</span> &ndash; #A89F94 Warm neutral for modern contrast.</p>
+                <p class="color-line"><span>Soft Sand</span> &ndash; #F4E9D8 Warmer more inviting big cozy areas.</p>
+                <p class="color-line"><span>Off-White</span> &ndash; #FAF7F2 Light, warm neutral for softer backgrounds.</p>
+                <div class="swatch-row">
+                    <div class="swatch" style="background: var(--charcoal);"></div>
+                    <div class="swatch" style="background: var(--warm-gray);"></div>
+                    <div class="swatch" style="background: var(--soft-sand);"></div>
+                    <div class="swatch" style="background: var(--off-white);"></div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="section">
+                <h2>Primary Brand Colors &mdash; Core Identity</h2>
+                <p class="lead">The main warm tones that define your look.</p>
+                <p class="color-line"><span>Rich Amber</span> &ndash; #B45102 Deep, rich orange-brown for brand anchors.</p>
+                <p class="color-line"><span>Bright Ember</span> &ndash; #E6783B Lighter, more vibrant orange for attention-grabbing accents.</p>
+                <p class="color-line"><span>Clay Terracotta</span> &ndash; #C55A2B Midpoint tone for gradients or softer warm emphasis.</p>
+                <div class="swatch-row">
+                    <div class="swatch" style="background: var(--rich-amber);"></div>
+                    <div class="swatch" style="background: var(--bright-ember);"></div>
+                    <div class="swatch" style="background: var(--clay-terracotta);"></div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="section">
+                <h2>Secondary Accents &mdash; Contrast &amp; Balance</h2>
+                <p class="lead">Use sparingly to create visual interest and prevent monotony.</p>
+                <p class="color-line"><span>Slate Blue</span> &ndash; #4A5D68 Cool, muted blue for contrast with warm tones.</p>
+                <p class="color-line"><span>Olive Bronze</span> &ndash; #6B5B3D Earthy green-brown for grounded elements.</p>
+                <p class="color-line"><span>Deep Wine</span> &ndash; #6A2E1B Dark, warm red-brown for depth and luxury notes.</p>
+                <div class="swatch-row">
+                    <div class="swatch" style="background: var(--slate-blue);"></div>
+                    <div class="swatch" style="background: var(--olive-bronze);"></div>
+                    <div class="swatch" style="background: var(--deep-wine);"></div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="section">
+                <h2>Highlight &amp; Prestige &mdash; Special Use Only</h2>
+                <p class="lead">Small doses for high-value elements like tournament signage, premium products, or seasonal campaigns.</p>
+                <p class="color-line"><span>Warm Gold</span> &ndash; #D9A441 Metallic-inspired highlight for prestige and elegance.</p>
+                <div class="swatch-row">
+                    <div class="swatch" style="background: var(--warm-gold);"></div>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <div class="section">
+                <h2>High-Impact Contrast &mdash; Clarity &amp; Emphasis Only</h2>
+                <p class="lead">Minimal use, mainly for text, outlines, or important highlights.</p>
+                <p class="color-line"><span>White</span> &ndash; #FFFFFF For maximum contrast on dark backgrounds.</p>
+                <p class="color-line"><span>Black</span> &ndash; #000000 For maximum contrast on light backgrounds.</p>
+                <div class="swatch-row">
+                    <div class="swatch" style="background: #ffffff;"></div>
+                    <div class="swatch" style="background: var(--black);"></div>
+                </div>
+            </div>
+        </section>
+
+        <aside>
+            <div class="palette-rail" aria-label="Brand palette">
+                <div class="rail-block" style="background: var(--soft-sand); --weight: 35;"></div>
+                <div class="rail-block" style="background: var(--charcoal); --weight: 20;"></div>
+                <div class="rail-block" style="background: var(--rich-amber); --weight: 10;"></div>
+                <div class="rail-block" style="background: var(--bright-ember); --weight: 10;"></div>
+                <div class="rail-block" style="background: var(--warm-gray); --weight: 7;"></div>
+                <div class="rail-block" style="background: var(--slate-blue); --weight: 4;"></div>
+                <div class="rail-block" style="background: var(--olive-bronze); --weight: 4;"></div>
+                <div class="rail-block" style="background: var(--deep-wine); --weight: 4;"></div>
+                <div class="rail-thin" style="background: var(--warm-gold); --weight: 2;"></div>
+                <div class="rail-thin" style="background: var(--off-white); --weight: 2;"></div>
+                <div class="rail-thin" style="background: var(--white); --weight: 1;"></div>
+                <div class="rail-thin" style="background: var(--black); --weight: 1;"></div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
