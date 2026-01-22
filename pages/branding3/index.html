@@ -28,8 +28,8 @@
 
         body {
             margin: 0;
-            background: #F6F3EF;
-            color: #2B2B2B;
+            background: #F4F0EC;
+            color: #1B1B1B;
             font-family: 'HearthLexendExaVF', 'Trebuchet MS', sans-serif;
             line-height: 1.35;
         }
@@ -82,10 +82,14 @@
             flex-shrink: 0;
         }
 
-        .color-line span {
+        .color-line span:first-of-type {
             font-weight: 600;
             min-width: 140px;
             flex-shrink: 0;
+        }
+
+        .color-line span:last-of-type {
+            font-weight: 400;
         }
 
         .palette-rail {
@@ -121,16 +125,19 @@
         }
 
         .nav-link a {
-            color: var(--autumn-ember);
+            color: var(--blue-slate);
             text-decoration: none;
         }
 
         .nav-link a:hover {
+            color: var(--atomic-tangerine);
             text-decoration: underline;
         }
 
-        .nav-link a + a {
-            margin-left: 16px;
+        .nav-link a + a::before {
+            content: " | ";
+            color: #1B1B1B;
+            margin: 0 8px;
         }
 
         .page-title {
@@ -139,7 +146,7 @@
             padding: 0 22px;
             font-size: 1.8rem;
             font-weight: 600;
-            color: #1E1E1E;
+            color: var(--autumn-ember);
         }
 
         @media (max-width: 760px) {
