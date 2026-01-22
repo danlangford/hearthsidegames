@@ -68,24 +68,24 @@
         }
 
         .color-line {
-            margin: 3px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 8px 0;
             font-size: 0.92rem;
+        }
+
+        .color-line .swatch {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #2C2C2C;
+            flex-shrink: 0;
         }
 
         .color-line span {
             font-weight: 600;
-        }
-
-        .swatch-row {
-            display: flex;
-            gap: 6px;
-            margin: 10px 0 2px;
-        }
-
-        .swatch {
-            width: 42px;
-            height: 32px;
-            border: 1px solid #2C2C2C;
+            min-width: 140px;
+            flex-shrink: 0;
         }
 
         .palette-rail {
@@ -175,15 +175,25 @@
             <div class="section">
                 <h1>Base Neutrals &mdash; Foundations &amp; Backgrounds</h1>
                 <p class="lead">Use for large areas, backgrounds, and to give your design breathing room.</p>
-                <p class="color-line"><span>Carbon Black</span> &ndash; #1B1B1B Dark neutral for depth, softer than black.</p>
-                <p class="color-line"><span>Khaki Beige</span> &ndash; #C3B091 Warm neutral for modern contrast.</p>
-                <p class="color-line"><span>Antique White</span> &ndash; #FAEBD7 Warmer more inviting big cozy areas.</p>
-                <p class="color-line"><span>Parchment</span> &ndash; #F4F0EC Light, warm neutral for softer backgrounds.</p>
-                <div class="swatch-row">
+                <div class="color-line">
                     <div class="swatch" style="background: var(--carbon-black);"></div>
+                    <span>Carbon Black</span>
+                    <span>&ndash; #1B1B1B Dark neutral for depth, softer than black.</span>
+                </div>
+                <div class="color-line">
                     <div class="swatch" style="background: var(--khaki-beige);"></div>
+                    <span>Khaki Beige</span>
+                    <span>&ndash; #C3B091 Warm neutral for modern contrast.</span>
+                </div>
+                <div class="color-line">
                     <div class="swatch" style="background: var(--antique-white);"></div>
+                    <span>Antique White</span>
+                    <span>&ndash; #FAEBD7 Warmer more inviting big cozy areas.</span>
+                </div>
+                <div class="color-line">
                     <div class="swatch" style="background: var(--parchment);"></div>
+                    <span>Parchment</span>
+                    <span>&ndash; #F4F0EC Light, warm neutral for softer backgrounds.</span>
                 </div>
             </div>
 
@@ -192,13 +202,20 @@
             <div class="section">
                 <h2>Primary Brand Colors &mdash; Core Identity</h2>
                 <p class="lead">The main warm tones that define your look.</p>
-                <p class="color-line"><span>Autumn Ember</span> &ndash; #BF5700 Deep, rich orange-brown for brand anchors.</p>
-                <p class="color-line"><span>Atomic Tangerine</span> &ndash; #FF7538 Lighter, more vibrant orange for attention-grabbing accents.</p>
-                <p class="color-line"><span>Spicy Orange</span> &ndash; #D44500 Midpoint tone for gradients or softer warm emphasis.</p>
-                <div class="swatch-row">
+                <div class="color-line">
                     <div class="swatch" style="background: var(--autumn-ember);"></div>
+                    <span>Autumn Ember</span>
+                    <span>&ndash; #BF5700 Deep, rich orange-brown for brand anchors.</span>
+                </div>
+                <div class="color-line">
                     <div class="swatch" style="background: var(--atomic-tangerine);"></div>
+                    <span>Atomic Tangerine</span>
+                    <span>&ndash; #FF7538 Lighter, more vibrant orange for attention-grabbing accents.</span>
+                </div>
+                <div class="color-line">
                     <div class="swatch" style="background: var(--spicy-orange);"></div>
+                    <span>Spicy Orange</span>
+                    <span>&ndash; #D44500 Midpoint tone for gradients or softer warm emphasis.</span>
                 </div>
             </div>
 
@@ -207,13 +224,20 @@
             <div class="section">
                 <h2>Secondary Accents &mdash; Contrast &amp; Balance</h2>
                 <p class="lead">Use sparingly to create visual interest and prevent monotony.</p>
-                <p class="color-line"><span>Blue Slate</span> &ndash; #536878 Cool, muted blue for contrast with warm tones.</p>
-                <p class="color-line"><span>Olive Bark</span> &ndash; #6C541E Earthy green-brown for grounded elements.</p>
-                <p class="color-line"><span>Dark Walnut</span> &ndash; #59260B Dark, warm red-brown for depth and luxury notes.</p>
-                <div class="swatch-row">
+                <div class="color-line">
                     <div class="swatch" style="background: var(--blue-slate);"></div>
+                    <span>Blue Slate</span>
+                    <span>&ndash; #536878 Cool, muted blue for contrast with warm tones.</span>
+                </div>
+                <div class="color-line">
                     <div class="swatch" style="background: var(--olive-bark);"></div>
+                    <span>Olive Bark</span>
+                    <span>&ndash; #6C541E Earthy green-brown for grounded elements.</span>
+                </div>
+                <div class="color-line">
                     <div class="swatch" style="background: var(--dark-walnut);"></div>
+                    <span>Dark Walnut</span>
+                    <span>&ndash; #59260B Dark, warm red-brown for depth and luxury notes.</span>
                 </div>
             </div>
 
@@ -222,9 +246,10 @@
             <div class="section">
                 <h2>Highlight &amp; Prestige &mdash; Special Use Only</h2>
                 <p class="lead">Small doses for high-value elements like tournament signage, premium products, or seasonal campaigns.</p>
-                <p class="color-line"><span>Honey Bronze</span> &ndash; #E8AC41 Metallic-inspired highlight for prestige and elegance.</p>
-                <div class="swatch-row">
+                <div class="color-line">
                     <div class="swatch" style="background: var(--honey-bronze);"></div>
+                    <span>Honey Bronze</span>
+                    <span>&ndash; #E8AC41 Metallic-inspired highlight for prestige and elegance.</span>
                 </div>
             </div>
 
@@ -233,11 +258,15 @@
             <div class="section">
                 <h2>High-Impact Contrast &mdash; Clarity &amp; Emphasis Only</h2>
                 <p class="lead">Minimal use, mainly for text, outlines, or important highlights.</p>
-                <p class="color-line"><span>White</span> &ndash; #FFFFFF For maximum contrast on dark backgrounds.</p>
-                <p class="color-line"><span>Black</span> &ndash; #000000 For maximum contrast on light backgrounds.</p>
-                <div class="swatch-row">
+                <div class="color-line">
                     <div class="swatch" style="background: var(--white);"></div>
+                    <span>White</span>
+                    <span>&ndash; #FFFFFF For maximum contrast on dark backgrounds.</span>
+                </div>
+                <div class="color-line">
                     <div class="swatch" style="background: var(--black);"></div>
+                    <span>Black</span>
+                    <span>&ndash; #000000 For maximum contrast on light backgrounds.</span>
                 </div>
             </div>
         </section>
