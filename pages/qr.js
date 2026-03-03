@@ -1,9 +1,70 @@
-// Path to logo SVG (white background recommended)
-const logoPath = 'flame-deck-compat.svg';
+const defaultLogoPath = 'flame-deck-compat.svg';
+const logoRules = [
+    {
+        domainIncludes: 'tcg.ravensburgerplay.com',
+        logoPath: 'lorcana.svg'
+    },
+    {
+        domainIncludes: 'locator.riftbound.uvsgames.com',
+        logoPath: 'riftbound.svg'
+    }
+];
 const gallery = document.getElementById('gallery');
 const qrForm = document.getElementById('qrForm');
 const qrUrl = document.getElementById('qrUrl');
 const qrName = document.getElementById('qrName');
+
+function parseHttpUrl(candidate) {
+    try {
+        const parsed = new URL(candidate);
+        if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+            return parsed;
+        }
+        return null;
+    } catch (err) {
+        return null;
+    }
+}
+
+function normalizeUrl(rawUrl) {
+    const trimmed = rawUrl.trim();
+    if (!trimmed) {
+        return null;
+    }
+
+    const direct = parseHttpUrl(trimmed);
+    if (direct) {
+        return direct.toString();
+    }
+
+    const withHttp = parseHttpUrl(`http://${trimmed}`);
+    return withHttp ? withHttp.toString() : null;
+}
+
+function deriveName(rawName, url) {
+    const trimmed = rawName.trim();
+    if (trimmed) {
+        return trimmed;
+    }
+
+    try {
+        return new URL(url).hostname;
+    } catch (err) {
+        return url;
+    }
+}
+
+function getLogoForUrl(url) {
+    try {
+        const parsed = new URL(url);
+        const host = parsed.hostname.toLowerCase();
+        const match = logoRules.find((rule) => host.includes(rule.domainIncludes));
+        return match ? match.logoPath : defaultLogoPath;
+    } catch (err) {
+        // If URL parsing fails, keep default behavior.
+        return defaultLogoPath;
+    }
+}
 
 function addQR(url, name) {
     const template = document.getElementById('tile-template');
@@ -17,6 +78,8 @@ function addQR(url, name) {
         console.error('Template missing required elements');
         return;
     }
+
+    const logoPath = getLogoForUrl(url);
 
     const size = 1024;
     const qrCode = new QRCodeStyling({
@@ -50,11 +113,19 @@ function addQR(url, name) {
 
 qrForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    const url = qrUrl.value.trim();
-    const name = qrName.value.trim();
-    if (!url || !name) return;
-    addQR(url, name);
+    const normalizedUrl = normalizeUrl(qrUrl.value);
+    if (!normalizedUrl) {
+        qrUrl.setCustomValidity('Please enter a valid URL');
+        qrUrl.reportValidity();
+        qrUrl.setCustomValidity('');
+        return;
+    }
+
+    const name = deriveName(qrName.value, normalizedUrl);
+    addQR(normalizedUrl, name);
+
     qrUrl.value = '';
     qrName.value = '';
+    qrUrl.setCustomValidity('');
     qrUrl.focus();
 });

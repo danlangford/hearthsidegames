@@ -3,7 +3,7 @@ html, body {
     height: 100%;
 }
 .qr-form img {
-    filter: brightness(0) invert(1);
+    filter: none;
 }
 .container {
     width: 100%;

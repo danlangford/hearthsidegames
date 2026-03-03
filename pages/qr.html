@@ -15,10 +15,10 @@
 </head>
 <body>
     <div class="container">
-        <form class="qr-form" id="qrForm" autocomplete="off">
+        <form class="qr-form" id="qrForm" autocomplete="off" novalidate>
             <img src="flame-deck-compat.svg" alt="Hearthside Games Logo" style="height:38px;width:auto;margin-right:18px;vertical-align:middle;" />
             <input type="url" id="qrUrl" placeholder="Paste URL here" required autofocus>
-            <input type="text" id="qrName" placeholder="Name (e.g. Event, Table)" required>
+            <input type="text" id="qrName" placeholder="Name (optional)">
             <button type="submit"><i class="fa-solid fa-qrcode" style="margin-right:6px;"></i>Generate QR</button>
         </form>
         <div class="gallery" id="gallery"></div>
