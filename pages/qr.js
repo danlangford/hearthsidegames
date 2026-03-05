@@ -2,11 +2,15 @@ const defaultLogoPath = 'flame-deck-compat.svg';
 const logoRules = [
     {
         domainIncludes: 'tcg.ravensburgerplay.com',
-        logoPath: 'lorcana.svg'
+        logoPath: 'qr-logos/lorcana.svg'
     },
     {
         domainIncludes: 'locator.riftbound.uvsgames.com',
-        logoPath: 'riftbound.svg'
+        logoPath: 'qr-logos/riftbound.svg'
+    },
+    {
+        domainIncludes: 'tournaments.nullsignal.games',
+        logoPath: 'qr-logos/netrunner.svg'
     }
 ];
 const gallery = document.getElementById('gallery');
