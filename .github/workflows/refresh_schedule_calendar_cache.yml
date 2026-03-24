@@ -1,0 +1,41 @@
+name: Refresh Schedule Calendar Cache
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-calendar-cache:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh cached calendar files
+        run: python3 scripts/update_schedule_calendar_cache.py
+
+      - name: Commit cache updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pages/schedule/data/*.ics
+
+          if git diff --cached --quiet; then
+            echo "No cache changes detected."
+            exit 0
+          fi
+
+          git commit -m "Refresh schedule calendar cache"
+          git push origin HEAD:${{ github.ref_name }}

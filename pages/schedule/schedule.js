@@ -9,11 +9,11 @@ var H = 1920;
 
 var CALENDARS = {
   leagues: {
-    id: 'da80818db985c7def75a3f684726983ff5361d88ebe99a1800a16230d7348b0f@group.calendar.google.com',
+    path: 'data/leagues.ics',
     type: 'league'
   },
   spotlight: {
-    id: 'c5990df85ec2c327d239e1ad43a117f68cb3cd715aca633e833de1c0f80b6e3a@group.calendar.google.com',
+    path: 'data/spotlight.ics',
     type: 'spotlight'
   }
 };
@@ -71,12 +71,13 @@ function getComingWeek() {
 
 // ──── ICAL PARSING ────
 
-function fetchCalendar(calId) {
-  var url = 'https://calendar.google.com/calendar/ical/' +
-    encodeURIComponent(calId) + '/public/basic.ics';
-  // Use CORS proxy
-  return fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(url))
-    .then(function (r) { return r.text(); });
+function fetchCalendar(path) {
+  return fetch(path, { cache: 'no-store' }).then(function (r) {
+    if (!r.ok) {
+      throw new Error('HTTP ' + r.status + ' loading ' + path);
+    }
+    return r.text();
+  });
 }
 
 function parseICS(text) {
@@ -316,8 +317,8 @@ async function generate() {
     showStatus('Fetching calendars...');
 
     var [leaguesText, spotlightText] = await Promise.all([
-      fetchCalendar(CALENDARS.leagues.id),
-      fetchCalendar(CALENDARS.spotlight.id)
+      fetchCalendar(CALENDARS.leagues.path),
+      fetchCalendar(CALENDARS.spotlight.path)
     ]);
 
     var leagueEvents = parseICS(leaguesText);
