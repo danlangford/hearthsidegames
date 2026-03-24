@@ -75,7 +75,7 @@ function fetchCalendar(calId) {
   var url = 'https://calendar.google.com/calendar/ical/' +
     encodeURIComponent(calId) + '/public/basic.ics';
   // Use CORS proxy
-  return fetch('https://corsproxy.io/?' + encodeURIComponent(url))
+  return fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(url))
     .then(function (r) { return r.text(); });
 }
 
