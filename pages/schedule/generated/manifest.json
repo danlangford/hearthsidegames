@@ -1,0 +1,16 @@
+{
+  "current_week": {
+    "label": "This Week",
+    "start": "2026-03-23",
+    "end": "2026-03-29",
+    "filename": "schedule-260323.png",
+    "alias": null
+  },
+  "next_week": {
+    "label": "Next Week",
+    "start": "2026-03-30",
+    "end": "2026-04-05",
+    "filename": "schedule-260330.png",
+    "alias": "schedule.png"
+  }
+}
