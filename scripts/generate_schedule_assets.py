@@ -362,8 +362,8 @@ def main():
     current_events, current_by_day = build_week_data(source_events, current_week)
     next_events, next_by_day = build_week_data(source_events, next_week)
 
-    current_name = f"schedule-{current_week['start'].date().isoformat()}-to-{current_week['end'].date().isoformat()}.png"
-    next_name = f"schedule-{next_week['start'].date().isoformat()}-to-{next_week['end'].date().isoformat()}.png"
+    current_name = f"schedule-{current_week['start'].strftime('%y%m%d')}.png"
+    next_name = f"schedule-{next_week['start'].strftime('%y%m%d')}.png"
 
     draw_schedule_image(OUTPUT_DIR / current_name, "This Week", current_week, current_by_day, len(current_events))
     draw_schedule_image(OUTPUT_DIR / next_name, "Next Week", next_week, next_by_day, len(next_events))
