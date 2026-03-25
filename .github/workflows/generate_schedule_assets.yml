@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.ref_name }}
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -28,6 +28,9 @@ jobs:
 
       - name: Generate schedule images
         run: python3 scripts/generate_schedule_assets.py
+
+      - name: Show generated asset diff
+        run: git status --short pages/schedule/generated
 
       - name: Commit generated assets
         run: |
@@ -40,5 +43,7 @@ jobs:
             exit 0
           fi
 
+          echo "Committing generated asset changes:"
+          git diff --cached --name-status
           git commit -m "Refresh generated schedule assets"
           git push origin HEAD:${{ github.ref_name }}

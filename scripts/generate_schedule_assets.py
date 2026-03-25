@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import hashlib
+import io
 import json
 import shutil
 from datetime import UTC, datetime, time, timedelta
@@ -50,6 +52,7 @@ def fetch_calendar(url):
         body = response.read().decode("utf-8")
     if "BEGIN:VCALENDAR" not in body:
         raise RuntimeError(f"Unexpected response for {url}")
+    print(f"Fetched calendar: url={url} bytes={len(body.encode('utf-8'))}")
     return body
 
 
@@ -208,9 +211,12 @@ def expand_event(event, week):
 def collect_events():
     merged = []
     for event_type, url in CALENDARS.items():
-        for event in parse_ics(fetch_calendar(url)):
+        parsed = parse_ics(fetch_calendar(url))
+        print(f"Parsed source events: calendar={event_type} count={len(parsed)}")
+        for event in parsed:
             event["type"] = event_type
             merged.append(event)
+    print(f"Collected source events: total={len(merged)}")
     return merged
 
 
@@ -332,7 +338,55 @@ def draw_schedule_image(output_path, label, week, by_day, event_count):
     draw.text((W / 2, y + 40), "hearthside.games", fill=(90, 84, 78), font=FONT_BRAND, anchor="ma")
     draw.text((W / 2, y + 68), "6802 S Redwood Rd · West Jordan, UT", fill=(130, 122, 114), font=FONT_META, anchor="ma")
 
-    image.convert("RGB").save(output_path)
+    save_kwargs = {"format": "PNG"} if isinstance(output_path, io.BytesIO) else {}
+    image.convert("RGB").save(output_path, **save_kwargs)
+
+
+def render_schedule_image(label, week, by_day, event_count):
+    buffer = io.BytesIO()
+    draw_schedule_image(buffer, label, week, by_day, event_count)
+    return buffer.getvalue()
+
+
+def sha256_digest(content):
+    return hashlib.sha256(content).hexdigest()
+
+
+def write_if_changed(path, content, label):
+    previous = path.read_bytes() if path.exists() else None
+    if previous == content:
+        print(
+            f"Asset unchanged: path={path.relative_to(ROOT)} "
+            f"sha256={sha256_digest(content)[:12]} bytes={len(content)} label={label}"
+        )
+        return False
+
+    path.write_bytes(content)
+    action = "created" if previous is None else "updated"
+    detail = (
+        f"old_sha256={sha256_digest(previous)[:12]} old_bytes={len(previous)} "
+        if previous is not None
+        else ""
+    )
+    print(
+        f"Asset {action}: path={path.relative_to(ROOT)} "
+        f"{detail}new_sha256={sha256_digest(content)[:12]} new_bytes={len(content)} label={label}"
+    )
+    return True
+
+
+def remove_stale_outputs(expected_paths):
+    expected_names = {path.name for path in expected_paths}
+    removed = []
+    for path in OUTPUT_DIR.glob("schedule-*.png"):
+        if path.name in expected_names:
+            continue
+        path.unlink()
+        removed.append(path.name)
+    if removed:
+        print(f"Removed stale dated assets: count={len(removed)} files={', '.join(sorted(removed))}")
+    else:
+        print("Removed stale dated assets: count=0")
 
 
 def build_manifest_entry(label, week, filename, alias=None):
@@ -347,11 +401,6 @@ def build_manifest_entry(label, week, filename, alias=None):
 
 def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    for path in OUTPUT_DIR.glob("schedule*.png"):
-        path.unlink()
-    manifest_path = OUTPUT_DIR / "manifest.json"
-    if manifest_path.exists():
-        manifest_path.unlink()
 
     source_events = collect_events()
     today = datetime.now(DENVER).date()
@@ -364,19 +413,38 @@ def main():
 
     current_name = f"schedule-{current_week['start'].strftime('%y%m%d')}.png"
     next_name = f"schedule-{next_week['start'].strftime('%y%m%d')}.png"
+    current_path = OUTPUT_DIR / current_name
+    next_path = OUTPUT_DIR / next_name
+    alias_path = OUTPUT_DIR / "schedule.png"
+    manifest_path = OUTPUT_DIR / "manifest.json"
 
-    draw_schedule_image(OUTPUT_DIR / current_name, "This Week", current_week, current_by_day, len(current_events))
-    draw_schedule_image(OUTPUT_DIR / next_name, "Next Week", next_week, next_by_day, len(next_events))
+    print(
+        "Expanded occurrences: "
+        f"current_week={current_week['start'].date()}..{current_week['end'].date()} current_events={len(current_events)} "
+        f"next_week={next_week['start'].date()}..{next_week['end'].date()} next_events={len(next_events)}"
+    )
 
-    shutil.copyfile(OUTPUT_DIR / next_name, OUTPUT_DIR / "schedule.png")
+    current_bytes = render_schedule_image("This Week", current_week, current_by_day, len(current_events))
+    next_bytes = render_schedule_image("Next Week", next_week, next_by_day, len(next_events))
+
+    current_changed = write_if_changed(current_path, current_bytes, "This Week")
+    next_changed = write_if_changed(next_path, next_bytes, "Next Week")
+    alias_changed = write_if_changed(alias_path, next_bytes, "Next Week Alias")
+
+    remove_stale_outputs([current_path, next_path])
 
     manifest = {
         "current_week": build_manifest_entry("This Week", current_week, current_name),
         "next_week": build_manifest_entry("Next Week", next_week, next_name, alias="schedule.png"),
     }
+    manifest_content = (json.dumps(manifest, indent=2) + "\n").encode("utf-8")
+    manifest_changed = write_if_changed(manifest_path, manifest_content, "Manifest")
 
-    (OUTPUT_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    print("Generated schedule assets")
+    print(
+        "Generation summary: "
+        f"current_changed={current_changed} next_changed={next_changed} "
+        f"alias_changed={alias_changed} manifest_changed={manifest_changed}"
+    )
 
 
 if __name__ == "__main__":
