@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           ref: ${{ github.ref_name }}
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -46,4 +47,4 @@ jobs:
           echo "Committing generated asset changes:"
           git diff --cached --name-status
           git commit -m "Refresh generated schedule assets"
-          git push origin HEAD:${{ github.ref_name }}
+          git push "https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}
