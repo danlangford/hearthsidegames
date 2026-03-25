@@ -8,8 +8,8 @@ async function loadSchedules() {
   try {
     var manifest = await fetchManifest();
     var cards = [
-      buildCard(manifest.next_week, true),
-      buildCard(manifest.current_week, false)
+      buildCard(manifest.current_week, false),
+      buildCard(manifest.next_week, true)
     ].filter(Boolean);
 
     if (!cards.length) {
