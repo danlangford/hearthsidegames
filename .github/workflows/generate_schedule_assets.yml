@@ -1,4 +1,4 @@
-name: Refresh Schedule Calendar Cache
+name: Generate Schedule Assets
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  refresh-calendar-cache:
+  generate-schedule-assets:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,19 +23,22 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Refresh cached calendar files
-        run: python3 scripts/update_schedule_calendar_cache.py
+      - name: Install Pillow
+        run: python3 -m pip install pillow
 
-      - name: Commit cache updates
+      - name: Generate schedule images
+        run: python3 scripts/generate_schedule_assets.py
+
+      - name: Commit generated assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pages/schedule/data/*.ics
+          git add pages/schedule/generated
 
           if git diff --cached --quiet; then
-            echo "No cache changes detected."
+            echo "No generated asset changes detected."
             exit 0
           fi
 
-          git commit -m "Refresh schedule calendar cache"
+          git commit -m "Refresh generated schedule assets"
           git push origin HEAD:${{ github.ref_name }}

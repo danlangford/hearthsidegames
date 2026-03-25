@@ -6,7 +6,7 @@
   <title>Weekly Schedule — Hearthside Games</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     @font-face {
       font-family: 'HearthLexendExaVF';
@@ -34,47 +34,30 @@
         </svg>
         <div class="logo-text">
           <h1>Weekly Schedule</h1>
-          <span class="logo-sub">Shareable Generator</span>
+          <span class="logo-sub">Generated Every 4 Hours</span>
         </div>
       </div>
       <a href="../index.html" class="nav-link">← Home</a>
     </header>
 
     <main class="main">
-      <section class="input-section">
-        <label class="input-label">Generate This Week's Schedule</label>
-        <p class="input-hint" style="margin-bottom: 1rem;">
-          Fetches events from both Google Calendars (Leagues + Spotlight) and generates an Instagram Story for the coming week.
-        </p>
-        <div class="input-actions">
-          <button id="generate-btn" class="btn btn-primary">Generate Schedule</button>
+      <section class="intro-card">
+        <div>
+          <p class="eyebrow">Published Schedule Images</p>
+          <h2>Current and upcoming weekly stories</h2>
+          <p class="intro-copy">
+            GitHub Actions fetches the public Google Calendars, renders the schedule images, and publishes the latest files here. `schedule.png` always points at the next-week image.
+          </p>
         </div>
+        <div id="meta" class="meta-note">Loading generated schedule assets…</div>
       </section>
 
-      <section class="preview-section" id="preview-section" style="display:none;">
-        <div class="preview-container">
-          <div class="preview-frame">
-            <canvas id="story-canvas" width="1080" height="1920"></canvas>
-          </div>
-          <div class="preview-actions">
-            <button id="download-btn" class="btn btn-gold">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 12.75L4.5 8.25H7.5V2.25H10.5V8.25H13.5L9 12.75Z" fill="currentColor"/><path d="M15 14.25H3V15.75H15V14.25Z" fill="currentColor"/></svg>
-              Download Story
-            </button>
-            <button id="copy-btn" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="6" y="6" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M3 12V3.75C3 3.33579 3.33579 3 3.75 3H12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              Copy to Clipboard
-            </button>
-            <div id="status-msg" class="status-msg"></div>
-            <div id="event-summary" class="event-summary"></div>
-          </div>
-        </div>
-      </section>
+      <section id="schedule-grid" class="schedule-grid" aria-live="polite"></section>
 
-      <section class="empty-state" id="empty-state">
-        <div class="empty-icon">📅</div>
-        <p>Hit Generate to pull this week's events and create a shareable schedule</p>
-        <p class="empty-sub">1080 × 1920 — ready to share</p>
+      <section id="empty-state" class="empty-state" hidden>
+        <div class="empty-icon">🖼️</div>
+        <p>Generated schedule images are not available yet.</p>
+        <p class="empty-sub">Run the workflow once to publish this week and next week.</p>
       </section>
     </main>
   </div>
