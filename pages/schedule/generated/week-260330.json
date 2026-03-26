@@ -186,7 +186,7 @@
           "events": [
             {
               "summary": "One Piece - Weekly Play",
-              "type": "league",
+              "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-04-04T19:00:00-06:00"
             }

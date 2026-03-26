@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-03-23",
   "end": "2026-03-29",
-  "event_count": 16,
+  "event_count": 17,
   "days": [
     {
       "date": "2026-03-23",
@@ -191,8 +191,14 @@
           "all_day": false,
           "events": [
             {
+              "summary": "One Piece - PreRelease",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-03-28T19:00:00-06:00"
+            },
+            {
               "summary": "One Piece - Weekly Play",
-              "type": "league",
+              "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-03-28T19:00:00-06:00"
             }
