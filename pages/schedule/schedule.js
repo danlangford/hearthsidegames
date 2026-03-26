@@ -7,10 +7,11 @@ loadSchedules();
 async function loadSchedules() {
   try {
     var manifest = await fetchManifest();
-    var primaryLabel = manifest.current_week && manifest.current_week.alias ? manifest.current_week.label : manifest.next_week && manifest.next_week.alias ? manifest.next_week.label : '';
+    var primaryEntry = manifest.current_week && manifest.current_week.alias ? manifest.current_week : manifest.next_week && manifest.next_week.alias ? manifest.next_week : null;
     var cards = [
-      buildCard(manifest.current_week, manifest.current_week && manifest.current_week.label === primaryLabel),
-      buildCard(manifest.next_week, manifest.next_week && manifest.next_week.label === primaryLabel)
+      buildCard(manifest.current_week, primaryEntry && manifest.current_week && manifest.current_week.label === primaryEntry.label),
+      buildCard(manifest.next_week, primaryEntry && manifest.next_week && manifest.next_week.label === primaryEntry.label),
+      buildTvCard(primaryEntry)
     ].filter(Boolean);
 
     if (!cards.length) {
@@ -20,7 +21,7 @@ async function loadSchedules() {
 
     scheduleGrid.innerHTML = cards.join('');
     emptyState.hidden = true;
-    meta.textContent = 'Auto-generated every 4 hours. `schedule.png` points at this week on Monday-Friday and next week on Saturday-Sunday.';
+    meta.textContent = 'Auto-generated every 4 hours. `schedule.png` points at this week on Monday-Friday and next week on Saturday-Sunday. `scheduletv.png` is the in-store portrait layout.';
   } catch (err) {
     console.error(err);
     meta.textContent = 'Could not load generated schedule assets.';
@@ -58,6 +59,30 @@ function buildCard(entry, isPrimary) {
       '<div class="schedule-actions">' +
         '<a class="btn btn-primary" href="' + imagePath + '" download>Download Image</a>' +
         aliasLink +
+      '</div>' +
+    '</article>'
+  );
+}
+
+function buildTvCard(primaryEntry) {
+  if (!primaryEntry) return '';
+
+  var imagePath = 'generated/scheduletv.png';
+
+  return (
+    '<article class="schedule-card tv">' +
+      '<div class="schedule-card-header">' +
+        '<div>' +
+          '<h3>In-Store TV</h3>' +
+          '<p class="schedule-range">' + formatRange(primaryEntry.start, primaryEntry.end) + '</p>' +
+        '</div>' +
+        '<div class="schedule-badge">Large-type layout</div>' +
+      '</div>' +
+      '<a class="schedule-preview" href="' + imagePath + '" target="_blank" rel="noreferrer">' +
+        '<img src="' + imagePath + '" alt="In-store TV schedule">' +
+      '</a>' +
+      '<div class="schedule-actions">' +
+        '<a class="btn btn-primary" href="' + imagePath + '" download>Download TV Image</a>' +
       '</div>' +
     '</article>'
   );

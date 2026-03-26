@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-03-23",
   "end": "2026-03-29",
-  "event_count": 16,
+  "event_count": 17,
   "days": [
     {
       "date": "2026-03-23",
@@ -14,7 +14,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Lorcana - League Night",
+              "summary": "Lorcana",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-03-23T18:30:00-06:00"
@@ -27,7 +27,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Riftbound - League Night",
+              "summary": "Riftbound",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-03-23T19:00:00-06:00"
@@ -46,7 +46,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Union Arena - Weekly Play",
+              "summary": "Union Arena",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-03-24T19:00:00-06:00"
@@ -78,13 +78,19 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Lorcana -  Enchanted Series",
+              "summary": "Lorcana Enchanted Series",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-03-25T19:00:00-06:00"
             },
             {
-              "summary": "Pokemon - Weekly Play",
+              "summary": "MTG: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-25T19:00:00-06:00"
+            },
+            {
+              "summary": "Pokemon",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-03-25T19:00:00-06:00"
@@ -109,7 +115,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "One Piece - Weekly Play",
+              "summary": "One Piece",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-03-26T19:00:00-06:00"
@@ -121,7 +127,7 @@
               "starts_at": "2026-03-26T19:00:00-06:00"
             },
             {
-              "summary": "Star Wars Unlimited - Weekly Play",
+              "summary": "Star Wars Unlimited",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-03-26T19:00:00-06:00"
@@ -191,7 +197,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "One Piece - PreRelease",
+              "summary": "One Piece PreRelease",
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-03-28T19:00:00-06:00"

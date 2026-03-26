@@ -134,7 +134,7 @@ body {
 
 .schedule-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
 }
 
@@ -151,6 +151,10 @@ body {
 
 .schedule-card.primary {
   border-color: rgba(201, 137, 45, 0.32);
+}
+
+.schedule-card.tv {
+  border-color: rgba(142, 162, 175, 0.3);
 }
 
 .schedule-card-header {
