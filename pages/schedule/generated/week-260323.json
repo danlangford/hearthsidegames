@@ -1,0 +1,223 @@
+{
+  "label": "This Week",
+  "start": "2026-03-23",
+  "end": "2026-03-29",
+  "event_count": 16,
+  "days": [
+    {
+      "date": "2026-03-23",
+      "weekday": "MON",
+      "groups": [
+        {
+          "time_sort_key": "18:30",
+          "time_label": "6:30 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana - League Night",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-23T18:30:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Riftbound - League Night",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-23T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-24",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Union Arena - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-24T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-25",
+      "weekday": "WED",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-25T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana -  Enchanted Series",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-25T19:00:00-06:00"
+            },
+            {
+              "summary": "Pokemon - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-25T19:00:00-06:00"
+            },
+            {
+              "summary": "Wargaming Paint & Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-25T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-26",
+      "weekday": "THU",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-26T19:00:00-06:00"
+            },
+            {
+              "summary": "Painting class",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-03-26T19:00:00-06:00"
+            },
+            {
+              "summary": "Star Wars Unlimited - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-26T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-27",
+      "weekday": "FRI",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Z",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-27T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-27T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-28",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-03-28T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "10:30",
+          "time_label": "10:30 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Winterspell Iconic $1K - Pocahontas",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-03-28T10:30:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-28T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-29",
+      "weekday": "SUN",
+      "groups": [
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Gundam",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-29T12:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

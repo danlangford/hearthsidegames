@@ -24,13 +24,31 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Transform ICS to JSON
+        run: python3 scripts/transform_ics_to_json.py
+
+      - name: Check whether canonical schedule data changed
+        id: data_diff
+        run: |
+          if git diff --quiet -- pages/schedule/generated; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Show generated data diff
+        run: git status --short pages/schedule/generated
+
       - name: Install Pillow
+        if: steps.data_diff.outputs.changed == 'true'
         run: python3 -m pip install pillow
 
-      - name: Generate schedule images
-        run: python3 scripts/generate_schedule_assets.py
+      - name: Transform JSON to PNG
+        if: steps.data_diff.outputs.changed == 'true'
+        run: python3 scripts/transform_json_to_png.py
 
       - name: Show generated asset diff
+        if: steps.data_diff.outputs.changed == 'true'
         run: git status --short pages/schedule/generated
 
       - name: Commit generated assets
@@ -46,5 +64,5 @@ jobs:
 
           echo "Committing generated asset changes:"
           git diff --cached --name-status
-          git commit -m "Refresh generated schedule assets"
+          git commit -m "$(python3 scripts/print_schedule_commit_message.py)"
           git push "https://${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}

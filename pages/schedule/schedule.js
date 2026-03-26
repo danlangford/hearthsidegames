@@ -7,9 +7,10 @@ loadSchedules();
 async function loadSchedules() {
   try {
     var manifest = await fetchManifest();
+    var primaryLabel = manifest.current_week && manifest.current_week.alias ? manifest.current_week.label : manifest.next_week && manifest.next_week.alias ? manifest.next_week.label : '';
     var cards = [
-      buildCard(manifest.current_week, false),
-      buildCard(manifest.next_week, true)
+      buildCard(manifest.current_week, manifest.current_week && manifest.current_week.label === primaryLabel),
+      buildCard(manifest.next_week, manifest.next_week && manifest.next_week.label === primaryLabel)
     ].filter(Boolean);
 
     if (!cards.length) {
@@ -19,7 +20,7 @@ async function loadSchedules() {
 
     scheduleGrid.innerHTML = cards.join('');
     emptyState.hidden = true;
-    meta.textContent = 'Auto-generated every 4 hours. `schedule.png` always points at next week.';
+    meta.textContent = 'Auto-generated every 4 hours. `schedule.png` points at this week on Monday-Friday and next week on Saturday-Sunday.';
   } catch (err) {
     console.error(err);
     meta.textContent = 'Could not load generated schedule assets.';
@@ -55,7 +56,7 @@ function buildCard(entry, isPrimary) {
         '<img src="' + imagePath + '" alt="' + escapeHtml(entry.label) + ' schedule">' +
       '</a>' +
       '<div class="schedule-actions">' +
-        '<a class="btn btn-primary" href="' + imagePath + '" download>Download Dated</a>' +
+        '<a class="btn btn-primary" href="' + imagePath + '" download>Download Image</a>' +
         aliasLink +
       '</div>' +
     '</article>'

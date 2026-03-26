@@ -1,0 +1,217 @@
+{
+  "label": "Next Week",
+  "start": "2026-03-30",
+  "end": "2026-04-05",
+  "event_count": 15,
+  "days": [
+    {
+      "date": "2026-03-30",
+      "weekday": "MON",
+      "groups": [
+        {
+          "time_sort_key": "18:30",
+          "time_label": "6:30 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana - League Night",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-30T18:30:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Riftbound - League Night",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-30T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Union Arena - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-03-31T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-01",
+      "weekday": "WED",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-01T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana -  Enchanted Series",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-01T19:00:00-06:00"
+            },
+            {
+              "summary": "Pokemon - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-01T19:00:00-06:00"
+            },
+            {
+              "summary": "Wargaming Paint & Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-01T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "weekday": "THU",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-02T19:00:00-06:00"
+            },
+            {
+              "summary": "Star Wars Unlimited - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-02T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "weekday": "FRI",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Z",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-03T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-03T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-04",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-04-04T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Baby shower",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-04-04T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece - Weekly Play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-04T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-05",
+      "weekday": "SUN",
+      "groups": [
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Gundam",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-05T12:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
