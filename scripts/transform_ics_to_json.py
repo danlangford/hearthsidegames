@@ -71,8 +71,13 @@ def parse_ics(text):
             current["rrule"] = value
         elif base == "STATUS":
             current["status"] = value
+        elif base == "UID":
+            current["uid"] = value
         elif base == "RECURRENCE-ID":
             current["recurrence_id"] = value
+            current["recurrence_id_key"] = key
+        elif base == "EXDATE":
+            current.setdefault("exdates", []).append((value, key))
     return events
 
 
@@ -128,13 +133,33 @@ def get_week_range(reference_date, offset_weeks=0):
     return {"start": start_dt, "end": end_dt}
 
 
-def expand_event(event, week):
+def build_override_keys(events):
+    keys = set()
+    for event in events:
+        if not event.get("uid") or not event.get("recurrence_id"):
+            continue
+        recurrence_info = parse_dt(
+            event["recurrence_id"], event.get("recurrence_id_key", "")
+        )
+        keys.add((event["uid"], recurrence_info["dt"].isoformat()))
+    return keys
+
+
+def build_exdate_keys(event):
+    keys = set()
+    for value, key in event.get("exdates", []):
+        keys.add(parse_dt(value, key).get("dt").isoformat())
+    return keys
+
+
+def expand_event(event, week, override_keys):
     if event.get("status") == "CANCELLED" or "dtstart" not in event:
         return []
 
     start_info = parse_dt(event["dtstart"], event.get("dtstart_key", ""))
     start_dt = start_info["dt"]
     all_day = start_info["all_day"]
+    uid = event.get("uid")
 
     if event.get("recurrence_id"):
         if week["start"] <= start_dt <= week["end"]:
@@ -143,6 +168,7 @@ def expand_event(event, week):
                     "summary": event.get("summary", ""),
                     "dt": start_dt,
                     "all_day": all_day,
+                    "uid": uid,
                 }
             ]
         return []
@@ -154,6 +180,7 @@ def expand_event(event, week):
                     "summary": event.get("summary", ""),
                     "dt": start_dt,
                     "all_day": all_day,
+                    "uid": uid,
                 }
             ]
         return []
@@ -178,6 +205,7 @@ def expand_event(event, week):
 
     occurrences = []
     base_week_start = start_dt.date() - timedelta(days=start_dt.weekday())
+    exdate_keys = build_exdate_keys(event)
 
     for day_code in by_days:
         weekday = DAY_CODES.get(day_code)
@@ -206,11 +234,17 @@ def expand_event(event, week):
                 continue
 
         if week["start"] <= occurrence_dt <= week["end"]:
+            occurrence_key = occurrence_dt.isoformat()
+            if occurrence_key in exdate_keys:
+                continue
+            if uid and (uid, occurrence_key) in override_keys:
+                continue
             occurrences.append(
                 {
                     "summary": event.get("summary", ""),
                     "dt": occurrence_dt,
                     "all_day": all_day,
+                    "uid": uid,
                 }
             )
 
@@ -262,9 +296,10 @@ def dedupe_occurrences(items):
 
 
 def build_week_data(source_events, week, label):
+    override_keys = build_override_keys(source_events)
     occurrences = []
     for event in source_events:
-        for item in expand_event(event, week):
+        for item in expand_event(event, week, override_keys):
             item["type"] = event["type"]
             occurrences.append(item)
 
