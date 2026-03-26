@@ -32,31 +32,32 @@ MONTH_ABBR = [
 FONT_PATH = ROOT / "pages" / "HearthLexendExaVF.ttf"
 LOGO_PATH = ROOT / "pages" / "favicon.png"
 
-W = 1080
+W = 960
+H = 1080
 
 
 def load_font(size):
     return ImageFont.truetype(str(FONT_PATH), size=size)
 
 
-FONT_TITLE = load_font(52)
-FONT_SUBTITLE = load_font(30)
-FONT_DAY = load_font(30)
-FONT_DATE = load_font(20)
-FONT_TIME = load_font(22)
-FONT_EVENT = load_font(24)
-FONT_META = load_font(18)
-FONT_NO_EVENTS = load_font(22)
-FONT_BRAND = load_font(20)
+FONT_TITLE = load_font(43)
+FONT_SUBTITLE = load_font(26)
+FONT_DAY = load_font(26)
+FONT_DATE = load_font(18)
+FONT_TIME = load_font(18)
+FONT_EVENT = load_font(19)
+FONT_META = load_font(16)
+FONT_NO_EVENTS = load_font(19)
+FONT_BRAND = load_font(19)
 
 
-def make_background(height):
-    img = Image.new("RGBA", (W, height), "#F4F0EC")
+def make_background():
+    img = Image.new("RGBA", (W, H), "#F4F0EC")
     draw = ImageDraw.Draw(img)
     top = (244, 240, 236)
     bottom = (235, 228, 220)
-    for y in range(height):
-        ratio = y / max(height - 1, 1)
+    for y in range(H):
+        ratio = y / max(H - 1, 1)
         color = tuple(int(top[i] + (bottom[i] - top[i]) * ratio) for i in range(3))
         draw.line((0, y, W, y), fill=color)
     return img
@@ -90,65 +91,71 @@ def flatten_day_events(day):
     return flattened
 
 
+def get_event_line_height(event_count):
+    if event_count <= 1:
+        return 24
+    if event_count == 2:
+        return 22
+    if event_count == 3:
+        return 19
+    return 17
+
+
 def draw_schedule_image(output_path, payload):
     by_day = [flatten_day_events(day) for day in payload["days"]]
-    row_heights = [max(120, 30 + max(1, len(day_events)) * 42) for day_events in by_day]
-    height = 360 + sum(row_heights) + 140
-    image = make_background(height)
+    image = make_background()
     draw = ImageDraw.Draw(image)
+    row_top = 258
+    footer_top = H - 56
+    row_height = (footer_top - row_top) // len(payload["days"])
+    day_x = 44
+    event_x = 194
+    event_title_x = 344
 
     if LOGO_PATH.exists():
         logo = Image.open(LOGO_PATH).convert("RGBA")
-        logo = logo.resize((72, 72))
-        image.alpha_composite(logo, ((W - 72) // 2, 54))
+        logo = logo.resize((60, 60))
+        image.alpha_composite(logo, ((W - 60) // 2, 30))
 
     start_date = date.fromisoformat(payload["days"][0]["date"])
     end_date = date.fromisoformat(payload["days"][-1]["date"])
     draw.text(
-        (W / 2, 144),
+        (W / 2, 110),
         "HEARTHSIDE GAMES",
         fill=(108, 96, 88),
         font=FONT_META,
         anchor="ma",
     )
     draw.text(
-        (W / 2, 190),
+        (W / 2, 150),
         payload["label"].upper(),
         fill=(191, 87, 0),
         font=FONT_TITLE,
         anchor="ma",
     )
     draw.text(
-        (W / 2, 242),
+        (W / 2, 194),
         f"{format_range(start_date, end_date)}, {start_date.year}",
         fill=(77, 71, 64),
         font=FONT_SUBTITLE,
         anchor="ma",
     )
-    draw.text(
-        (W / 2, 286),
-        f'{payload["event_count"]} events',
-        fill=(103, 99, 92),
-        font=FONT_META,
-        anchor="ma",
-    )
+    legend_y = 230
+    draw.ellipse((W / 2 - 122, legend_y, W / 2 - 112, legend_y + 10), fill=(191, 87, 0))
+    draw.text((W / 2 - 96, legend_y - 4), "Weekly", fill=(77, 71, 64), font=FONT_META)
+    draw.ellipse((W / 2 + 10, legend_y, W / 2 + 20, legend_y + 10), fill=(74, 93, 104))
+    draw.text((W / 2 + 36, legend_y - 4), "Special", fill=(77, 71, 64), font=FONT_META)
 
-    legend_y = 320
-    draw.ellipse((380, legend_y, 392, legend_y + 12), fill=(191, 87, 0))
-    draw.text((408, legend_y - 4), "Weekly", fill=(77, 71, 64), font=FONT_META)
-    draw.ellipse((560, legend_y, 572, legend_y + 12), fill=(74, 93, 104))
-    draw.text((588, legend_y - 4), "Special", fill=(77, 71, 64), font=FONT_META)
-
-    y = 360
+    y = row_top
     for index, day_events in enumerate(by_day):
         day = payload["days"][index]
         day_date = date.fromisoformat(day["date"])
         if index > 0:
-            draw.line((65, y, W - 65, y), fill=(210, 205, 198), width=1)
+            draw.line((40, y, W - 40, y), fill=(210, 205, 198), width=1)
 
-        draw.text((70, y + 18), day["weekday"], fill=(191, 87, 0), font=FONT_DAY)
+        draw.text((day_x, y + 10), day["weekday"], fill=(191, 87, 0), font=FONT_DAY)
         draw.text(
-            (70, y + 52),
+            (day_x, y + 44),
             f"{MONTH_ABBR[day_date.month - 1]} {day_date.day}",
             fill=(122, 114, 104),
             font=FONT_DATE,
@@ -156,36 +163,37 @@ def draw_schedule_image(output_path, payload):
 
         if not day_events:
             draw.text(
-                (220, y + 32), "No events", fill=(156, 150, 142), font=FONT_NO_EVENTS
+                (event_x, y + 26), "No events", fill=(156, 150, 142), font=FONT_NO_EVENTS
             )
         else:
+            line_height = get_event_line_height(len(day_events))
             for row, event in enumerate(day_events):
-                ey = y + 18 + row * 42
+                ey = y + 10 + row * line_height
                 is_special = event["type"] == "spotlight"
                 dot_color = (74, 93, 104) if is_special else (191, 87, 0)
                 name_color = (74, 93, 104) if is_special else (27, 27, 27)
                 time_color = (116, 108, 100) if not is_special else (96, 108, 118)
-                draw.ellipse((198, ey + 10, 208, ey + 20), fill=dot_color)
+                draw.ellipse((event_x, ey + 7, event_x + 8, ey + 15), fill=dot_color)
                 draw.text(
-                    (220, ey),
+                    (event_x + 18, ey),
                     event["time_label"],
                     fill=time_color,
                     font=FONT_TIME,
                 )
-                title = fit_text(draw, event["summary"], FONT_EVENT, W - 430 - 65)
-                draw.text((430, ey), title, fill=name_color, font=FONT_EVENT)
+                title = fit_text(draw, event["summary"], FONT_EVENT, W - event_title_x - 40)
+                draw.text((event_title_x, ey), title, fill=name_color, font=FONT_EVENT)
 
-        y += max(120, 30 + max(1, len(day_events)) * 42)
+        y += row_height
 
     draw.text(
-        (W / 2, y + 40),
+        (W / 2, footer_top - 18),
         "hearthside.games",
         fill=(90, 84, 78),
         font=FONT_BRAND,
         anchor="ma",
     )
     draw.text(
-        (W / 2, y + 68),
+        (W / 2, footer_top + 6),
         "6802 S Redwood Rd · West Jordan, UT",
         fill=(130, 122, 114),
         font=FONT_META,
