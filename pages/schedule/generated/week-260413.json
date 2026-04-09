@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-04-13",
   "end": "2026-04-19",
-  "event_count": 16,
+  "event_count": 17,
   "days": [
     {
       "date": "2026-04-13",
@@ -50,6 +50,12 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-04-14T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer 40k",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-14T19:00:00-06:00"
             }
           ]
         }
@@ -91,12 +97,6 @@
             },
             {
               "summary": "Pokemon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-04-15T19:00:00-06:00"
-            },
-            {
-              "summary": "Wargaming Paint & Play",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-04-15T19:00:00-06:00"
@@ -197,6 +197,19 @@
       "date": "2026-04-19",
       "weekday": "SUN",
       "groups": [
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Warhammer 40k",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-19T10:00:00-06:00"
+            }
+          ]
+        },
         {
           "time_sort_key": "12:00",
           "time_label": "12 PM",
