@@ -1,11 +1,11 @@
 {
-  "label": "This Week",
-  "start": "2026-04-06",
-  "end": "2026-04-12",
-  "event_count": 19,
+  "label": "Next Week",
+  "start": "2026-04-20",
+  "end": "2026-04-26",
+  "event_count": 17,
   "days": [
     {
-      "date": "2026-04-06",
+      "date": "2026-04-20",
       "weekday": "MON",
       "groups": [
         {
@@ -17,7 +17,7 @@
               "summary": "Lorcana",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-06T18:30:00-06:00"
+              "starts_at": "2026-04-20T18:30:00-06:00"
             }
           ]
         },
@@ -30,14 +30,14 @@
               "summary": "Riftbound",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-06T19:00:00-06:00"
+              "starts_at": "2026-04-20T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-04-07",
+      "date": "2026-04-21",
       "weekday": "TUE",
       "groups": [
         {
@@ -49,14 +49,20 @@
               "summary": "Union Arena",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-07T19:00:00-06:00"
+              "starts_at": "2026-04-21T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer 40k",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-04-21T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-04-08",
+      "date": "2026-04-22",
       "weekday": "WED",
       "groups": [
         {
@@ -68,7 +74,7 @@
               "summary": "Netrunner",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-08T18:00:00-06:00"
+              "starts_at": "2026-04-22T18:00:00-06:00"
             }
           ]
         },
@@ -81,47 +87,28 @@
               "summary": "Lorcana Enchanted Series",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-08T19:00:00-06:00"
+              "starts_at": "2026-04-22T19:00:00-06:00"
             },
             {
               "summary": "MTG: Standard",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-08T19:00:00-06:00"
+              "starts_at": "2026-04-22T19:00:00-06:00"
             },
             {
               "summary": "Pokemon",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-08T19:00:00-06:00"
-            },
-            {
-              "summary": "Wargaming Paint & Play",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-04-08T19:00:00-06:00"
+              "starts_at": "2026-04-22T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-04-09",
+      "date": "2026-04-23",
       "weekday": "THU",
       "groups": [
-        {
-          "time_sort_key": "10:00",
-          "time_label": "10 AM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Private Event",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-04-09T10:00:00-06:00"
-            }
-          ]
-        },
         {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
@@ -131,45 +118,52 @@
               "summary": "One Piece Off Meta",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-09T19:00:00-06:00"
+              "starts_at": "2026-04-23T19:00:00-06:00"
             },
             {
               "summary": "Star Wars Unlimited",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-09T19:00:00-06:00"
+              "starts_at": "2026-04-23T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-04-10",
+      "date": "2026-04-24",
       "weekday": "FRI",
       "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Z PreTourney",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-04-24T18:00:00-06:00"
+            }
+          ]
+        },
         {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
           "all_day": false,
           "events": [
             {
-              "summary": "Dragon Ball Z",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-04-10T19:00:00-06:00"
-            },
-            {
               "summary": "MTG: Draft",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-10T19:00:00-06:00"
+              "starts_at": "2026-04-24T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-04-11",
+      "date": "2026-04-25",
       "weekday": "SAT",
       "groups": [
         {
@@ -178,36 +172,16 @@
           "all_day": true,
           "events": [
             {
+              "summary": "Dragonball Z Grand Kai Tournament",
+              "type": "spotlight",
+              "all_day": true,
+              "starts_at": "2026-04-25T00:00:00-06:00"
+            },
+            {
               "summary": "MTG: Commander",
               "type": "league",
               "all_day": true,
-              "starts_at": "2026-04-11T00:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "10:00",
-          "time_label": "10 AM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Puzzles",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-04-11T10:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "12:00",
-          "time_label": "12 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "birthday party",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-04-11T12:00:00-06:00"
+              "starts_at": "2026-04-25T00:00:00-06:00"
             }
           ]
         },
@@ -220,14 +194,14 @@
               "summary": "One Piece",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-11T19:00:00-06:00"
+              "starts_at": "2026-04-25T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-04-12",
+      "date": "2026-04-26",
       "weekday": "SUN",
       "groups": [
         {
@@ -239,7 +213,7 @@
               "summary": "Warhammer 40k",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-12T10:00:00-06:00"
+              "starts_at": "2026-04-26T10:00:00-06:00"
             }
           ]
         },
@@ -252,7 +226,7 @@
               "summary": "Gundam",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-12T12:00:00-06:00"
+              "starts_at": "2026-04-26T12:00:00-06:00"
             }
           ]
         }
