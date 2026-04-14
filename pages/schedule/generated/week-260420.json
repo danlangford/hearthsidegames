@@ -9,23 +9,16 @@
       "weekday": "MON",
       "groups": [
         {
-          "time_sort_key": "18:30",
-          "time_label": "6:30 PM",
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
           "all_day": false,
           "events": [
             {
               "summary": "Lorcana",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-04-20T18:30:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
+              "starts_at": "2026-04-20T19:00:00-06:00"
+            },
             {
               "summary": "Riftbound",
               "type": "league",
