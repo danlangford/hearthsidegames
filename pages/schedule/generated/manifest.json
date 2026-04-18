@@ -5,7 +5,7 @@
     "end": "2026-04-19",
     "filename": "schedule0.png",
     "data_filename": "week-260413.json",
-    "alias": "schedule.png",
+    "alias": null,
     "event_count": 17
   },
   "next_week": {
@@ -14,7 +14,7 @@
     "end": "2026-04-26",
     "filename": "schedule1.png",
     "data_filename": "week-260420.json",
-    "alias": null,
+    "alias": "schedule.png",
     "event_count": 17
   }
 }
