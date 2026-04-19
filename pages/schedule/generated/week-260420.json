@@ -108,7 +108,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "One Piece-Extended",
+              "summary": "One Piece: Extended",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-04-23T19:00:00-06:00"
@@ -184,7 +184,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "One Piece-Standard",
+              "summary": "One Piece: Standard",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-04-25T19:00:00-06:00"
