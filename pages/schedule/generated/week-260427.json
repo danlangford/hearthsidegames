@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-04-27",
   "end": "2026-05-03",
-  "event_count": 17,
+  "event_count": 18,
   "days": [
     {
       "date": "2026-04-27",
@@ -168,6 +168,19 @@
               "type": "league",
               "all_day": true,
               "starts_at": "2026-05-02T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Magic RCQ: Modern",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-05-02T10:00:00-06:00"
             }
           ]
         },
