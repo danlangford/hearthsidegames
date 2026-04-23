@@ -165,16 +165,23 @@
           "all_day": true,
           "events": [
             {
-              "summary": "Dragonball Z Grand Kai Tournament",
-              "type": "spotlight",
-              "all_day": true,
-              "starts_at": "2026-04-25T00:00:00-06:00"
-            },
-            {
               "summary": "MTG: Commander",
               "type": "league",
               "all_day": true,
               "starts_at": "2026-04-25T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "11:00",
+          "time_label": "11 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragonball Z Grand Kai Tournament",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-04-25T11:00:00-06:00"
             }
           ]
         },
