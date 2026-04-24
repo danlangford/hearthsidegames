@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-04-20",
   "end": "2026-04-26",
-  "event_count": 17,
+  "event_count": 18,
   "days": [
     {
       "date": "2026-04-20",
@@ -135,6 +135,12 @@
             {
               "summary": "Dragon Ball Z PreTourney",
               "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-04-24T18:00:00-06:00"
+            },
+            {
+              "summary": "Pathfinder Society",
+              "type": "league",
               "all_day": false,
               "starts_at": "2026-04-24T18:00:00-06:00"
             }

@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-04-27",
   "end": "2026-05-03",
-  "event_count": 18,
+  "event_count": 19,
   "days": [
     {
       "date": "2026-04-27",
@@ -127,6 +127,19 @@
       "date": "2026-05-01",
       "weekday": "FRI",
       "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pathfinder Society",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-05-01T18:00:00-06:00"
+            }
+          ]
+        },
         {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
