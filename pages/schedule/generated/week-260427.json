@@ -171,12 +171,6 @@
           "all_day": true,
           "events": [
             {
-              "summary": "Lorcana Iconic 1k",
-              "type": "spotlight",
-              "all_day": true,
-              "starts_at": "2026-05-02T00:00:00-06:00"
-            },
-            {
               "summary": "MTG: Commander",
               "type": "league",
               "all_day": true,
@@ -194,6 +188,19 @@
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-05-02T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "11:00",
+          "time_label": "11 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana Iconic 1k",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-05-02T11:00:00-06:00"
             }
           ]
         },
