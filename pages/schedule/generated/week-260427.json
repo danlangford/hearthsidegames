@@ -192,15 +192,15 @@
           ]
         },
         {
-          "time_sort_key": "11:00",
-          "time_label": "11 AM",
+          "time_sort_key": "10:30",
+          "time_label": "10:30 AM",
           "all_day": false,
           "events": [
             {
               "summary": "Lorcana Iconic 1k",
               "type": "spotlight",
               "all_day": false,
-              "starts_at": "2026-05-02T11:00:00-06:00"
+              "starts_at": "2026-05-02T10:30:00-06:00"
             }
           ]
         },
