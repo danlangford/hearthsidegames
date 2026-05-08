@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-05-04",
   "end": "2026-05-10",
-  "event_count": 21,
+  "event_count": 22,
   "days": [
     {
       "date": "2026-05-04",
@@ -108,7 +108,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Private event",
+              "summary": "Corp team building",
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-05-07T11:00:00-06:00"
@@ -140,6 +140,19 @@
       "date": "2026-05-08",
       "weekday": "FRI",
       "groups": [
+        {
+          "time_sort_key": "00:00",
+          "time_label": "12 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana pre-release",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-05-08T00:00:00-06:00"
+            }
+          ]
+        },
         {
           "time_sort_key": "18:00",
           "time_label": "6 PM",
