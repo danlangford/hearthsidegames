@@ -74,6 +74,12 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-05-13T18:00:00-06:00"
+            },
+            {
+              "summary": "Pokemon",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-05-13T18:00:00-06:00"
             }
           ]
         },
@@ -90,12 +96,6 @@
             },
             {
               "summary": "MTG: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-05-13T19:00:00-06:00"
-            },
-            {
-              "summary": "Pokemon",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-05-13T19:00:00-06:00"
