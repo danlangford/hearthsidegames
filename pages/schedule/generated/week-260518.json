@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-05-18",
   "end": "2026-05-24",
-  "event_count": 19,
+  "event_count": 18,
   "days": [
     {
       "date": "2026-05-18",
@@ -44,12 +44,6 @@
           "time_label": "7 PM",
           "all_day": false,
           "events": [
-            {
-              "summary": "Mahjong Learn to Play",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-05-19T19:00:00-06:00"
-            },
             {
               "summary": "Union Arena",
               "type": "league",
