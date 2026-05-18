@@ -1,11 +1,11 @@
 {
-  "label": "This Week",
-  "start": "2026-05-11",
-  "end": "2026-05-17",
-  "event_count": 19,
+  "label": "Next Week",
+  "start": "2026-05-25",
+  "end": "2026-05-31",
+  "event_count": 18,
   "days": [
     {
-      "date": "2026-05-11",
+      "date": "2026-05-25",
       "weekday": "MON",
       "groups": [
         {
@@ -17,26 +17,20 @@
               "summary": "Lorcana",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-11T19:00:00-06:00"
+              "starts_at": "2026-05-25T19:00:00-06:00"
             },
             {
               "summary": "Riftbound",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-11T19:00:00-06:00"
-            },
-            {
-              "summary": "SpeedPainting Class 1/5",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-05-11T19:00:00-06:00"
+              "starts_at": "2026-05-25T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-05-12",
+      "date": "2026-05-26",
       "weekday": "TUE",
       "groups": [
         {
@@ -48,20 +42,20 @@
               "summary": "Union Arena",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-12T19:00:00-06:00"
+              "starts_at": "2026-05-26T19:00:00-06:00"
             },
             {
               "summary": "Warhammer 40k",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-12T19:00:00-06:00"
+              "starts_at": "2026-05-26T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-05-13",
+      "date": "2026-05-27",
       "weekday": "WED",
       "groups": [
         {
@@ -73,13 +67,13 @@
               "summary": "Netrunner",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-13T18:00:00-06:00"
+              "starts_at": "2026-05-27T18:00:00-06:00"
             },
             {
               "summary": "Pokemon",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-13T18:00:00-06:00"
+              "starts_at": "2026-05-27T18:00:00-06:00"
             }
           ]
         },
@@ -92,20 +86,20 @@
               "summary": "Lorcana Enchanted Series",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-13T19:00:00-06:00"
+              "starts_at": "2026-05-27T19:00:00-06:00"
             },
             {
               "summary": "MTG: Standard",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-13T19:00:00-06:00"
+              "starts_at": "2026-05-27T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-05-14",
+      "date": "2026-05-28",
       "weekday": "THU",
       "groups": [
         {
@@ -117,20 +111,20 @@
               "summary": "One Piece: Standard",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-14T19:00:00-06:00"
+              "starts_at": "2026-05-28T19:00:00-06:00"
             },
             {
               "summary": "Star Wars Unlimited: Premier constructed",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-14T19:00:00-06:00"
+              "starts_at": "2026-05-28T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-05-15",
+      "date": "2026-05-29",
       "weekday": "FRI",
       "groups": [
         {
@@ -142,7 +136,7 @@
               "summary": "Pathfinder Society",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-15T18:00:00-06:00"
+              "starts_at": "2026-05-29T18:00:00-06:00"
             }
           ]
         },
@@ -155,20 +149,26 @@
               "summary": "Dragon Ball Z",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-15T19:00:00-06:00"
+              "starts_at": "2026-05-29T19:00:00-06:00"
             },
             {
               "summary": "MTG: Draft",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-15T19:00:00-06:00"
+              "starts_at": "2026-05-29T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Open the Archive Draft",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-05-29T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-05-16",
+      "date": "2026-05-30",
       "weekday": "SAT",
       "groups": [
         {
@@ -180,7 +180,7 @@
               "summary": "MTG: Commander",
               "type": "league",
               "all_day": true,
-              "starts_at": "2026-05-16T00:00:00-06:00"
+              "starts_at": "2026-05-30T00:00:00-06:00"
             }
           ]
         },
@@ -193,14 +193,14 @@
               "summary": "One Piece: Extended",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-16T19:00:00-06:00"
+              "starts_at": "2026-05-30T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-05-17",
+      "date": "2026-05-31",
       "weekday": "SUN",
       "groups": [
         {
@@ -212,7 +212,7 @@
               "summary": "Warhammer 40k",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-17T10:00:00-06:00"
+              "starts_at": "2026-05-31T10:00:00-06:00"
             }
           ]
         },
@@ -225,20 +225,7 @@
               "summary": "Gundam",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-05-17T12:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Trivia night",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-05-17T19:00:00-06:00"
+              "starts_at": "2026-05-31T12:00:00-06:00"
             }
           ]
         }

@@ -1,20 +1,20 @@
 {
   "current_week": {
     "label": "This Week",
-    "start": "2026-05-11",
-    "end": "2026-05-17",
-    "filename": "schedule0.png",
-    "data_filename": "week-260511.json",
-    "alias": null,
-    "event_count": 19
-  },
-  "next_week": {
-    "label": "Next Week",
     "start": "2026-05-18",
     "end": "2026-05-24",
-    "filename": "schedule1.png",
+    "filename": "schedule0.png",
     "data_filename": "week-260518.json",
     "alias": "schedule.png",
     "event_count": 20
+  },
+  "next_week": {
+    "label": "Next Week",
+    "start": "2026-05-25",
+    "end": "2026-05-31",
+    "filename": "schedule1.png",
+    "data_filename": "week-260525.json",
+    "alias": null,
+    "event_count": 18
   }
 }
