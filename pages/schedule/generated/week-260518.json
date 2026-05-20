@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-05-18",
   "end": "2026-05-24",
-  "event_count": 20,
+  "event_count": 21,
   "days": [
     {
       "date": "2026-05-18",
@@ -113,6 +113,12 @@
           "time_label": "7 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "Digimon",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-05-21T19:00:00-06:00"
+            },
             {
               "summary": "One Piece: Standard",
               "type": "league",
