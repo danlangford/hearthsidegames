@@ -70,12 +70,6 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Netrunner",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-03T18:00:00-06:00"
-            },
-            {
               "summary": "Pokemon",
               "type": "league",
               "all_day": false,
@@ -108,6 +102,19 @@
       "date": "2026-06-04",
       "weekday": "THU",
       "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-06-04T18:00:00-06:00"
+            }
+          ]
+        },
         {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
