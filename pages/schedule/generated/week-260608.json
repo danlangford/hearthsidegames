@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-06-08",
   "end": "2026-06-14",
-  "event_count": 21,
+  "event_count": 22,
   "days": [
     {
       "date": "2026-06-08",
@@ -134,7 +134,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Netrunner",
+              "summary": "L2P Warlords",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-06-11T18:00:00-06:00"
@@ -220,6 +220,19 @@
               "type": "league",
               "all_day": true,
               "starts_at": "2026-06-13T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Riftbound Summoners Skirmish",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-13T12:00:00-06:00"
             }
           ]
         },
