@@ -1,5 +1,5 @@
 {
-  "label": "Next Week",
+  "label": "This Week",
   "start": "2026-06-08",
   "end": "2026-06-14",
   "event_count": 22,
@@ -134,8 +134,8 @@
           "all_day": false,
           "events": [
             {
-              "summary": "L2P Warlords",
-              "type": "league",
+              "summary": "L2P Warlord",
+              "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-06-11T18:00:00-06:00"
             }
