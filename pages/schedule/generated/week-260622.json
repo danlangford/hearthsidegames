@@ -211,7 +211,7 @@
           "events": [
             {
               "summary": "Free RPG Day",
-              "type": "league",
+              "type": "spotlight",
               "all_day": true,
               "starts_at": "2026-06-27T00:00:00-06:00"
             },
