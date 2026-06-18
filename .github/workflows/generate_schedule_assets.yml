@@ -2,10 +2,19 @@ name: Generate Schedule Assets
 
 on:
   schedule:
-    - cron: "0 */4 * * *"
-    # Extra rollover runs: 12:05 AM Mountain during daylight and standard time.
+    # Mountain-local target runs, paired for daylight and standard time.
+    # 12:05 AM Mountain
     - cron: "5 6 * * *"
     - cron: "5 7 * * *"
+    # 9:05 AM Mountain
+    - cron: "5 15 * * *"
+    - cron: "5 16 * * *"
+    # 1:05 PM Mountain
+    - cron: "5 19 * * *"
+    - cron: "5 20 * * *"
+    # 6:05 PM Mountain
+    - cron: "5 0 * * *"
+    - cron: "5 1 * * *"
   workflow_dispatch:
 
 permissions:
