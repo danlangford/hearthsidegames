@@ -11,7 +11,7 @@ async function loadSchedules() {
     var cards = [
       buildCard(manifest.current_week, primaryEntry && manifest.current_week && manifest.current_week.label === primaryEntry.label),
       buildCard(manifest.next_week, primaryEntry && manifest.next_week && manifest.next_week.label === primaryEntry.label),
-      buildTvCard(primaryEntry)
+      buildTvCard()
     ].filter(Boolean);
 
     if (!cards.length) {
@@ -64,9 +64,7 @@ function buildCard(entry, isPrimary) {
   );
 }
 
-function buildTvCard(primaryEntry) {
-  if (!primaryEntry) return '';
-
+function buildTvCard() {
   var imagePath = 'generated/scheduletv.png';
 
   return (
@@ -74,7 +72,7 @@ function buildTvCard(primaryEntry) {
       '<div class="schedule-card-header">' +
         '<div>' +
           '<h3>In-Store TV</h3>' +
-          '<p class="schedule-range">' + formatRange(primaryEntry.start, primaryEntry.end) + '</p>' +
+          '<p class="schedule-range">Upcoming Events</p>' +
         '</div>' +
         '<div class="schedule-badge">Large-type layout</div>' +
       '</div>' +

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import io
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -482,6 +483,20 @@ def render_schedule_image(payload, layout):
 
 
 def main():
+    tv_only = "--tv-only" in sys.argv[1:]
+
+    tv_path = OUTPUT_DIR / "scheduletv.png"
+    tv_payload = load_week_payload(OUTPUT_DIR / "tv.json")
+
+    if tv_only:
+        tv_changed = write_if_changed(
+            tv_path,
+            render_schedule_image(tv_payload, TV_LAYOUT),
+            "TV Schedule",
+        )
+        print(f"Render summary: tv_changed={tv_changed}")
+        return
+
     manifest = load_week_payload(OUTPUT_DIR / "manifest.json")
 
     current_payload = load_week_payload(
@@ -494,7 +509,6 @@ def main():
     current_image_path = OUTPUT_DIR / manifest["current_week"]["filename"]
     next_image_path = OUTPUT_DIR / manifest["next_week"]["filename"]
     alias_path = OUTPUT_DIR / "schedule.png"
-    tv_path = OUTPUT_DIR / "scheduletv.png"
     alias_source_payload = (
         next_payload
         if manifest["next_week"].get("alias") == "schedule.png"
@@ -518,7 +532,7 @@ def main():
     )
     tv_changed = write_if_changed(
         tv_path,
-        render_schedule_image(alias_source_payload, TV_LAYOUT),
+        render_schedule_image(tv_payload, TV_LAYOUT),
         "TV Schedule",
     )
 
