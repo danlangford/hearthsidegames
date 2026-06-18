@@ -368,6 +368,31 @@ def build_week_data(source_events, week, label):
     }
 
 
+def count_events(days):
+    return sum(
+        len(group["events"])
+        for day in days
+        for group in day["groups"]
+    )
+
+
+def build_tv_data(current_data, next_data, today):
+    end_date = today + timedelta(days=7)
+    days = [
+        day
+        for day in current_data["days"] + next_data["days"]
+        if today <= datetime.fromisoformat(day["date"]).date() <= end_date
+    ]
+
+    return {
+        "label": "Upcoming Events",
+        "start": today.isoformat(),
+        "end": end_date.isoformat(),
+        "event_count": count_events(days),
+        "days": days,
+    }
+
+
 def build_week_filename(week):
     return f'week-{week["start"].strftime("%y%m%d")}.json'
 
@@ -431,15 +456,18 @@ def main():
 
     current_data = build_week_data(source_events, current_week, "This Week")
     next_data = build_week_data(source_events, next_week, "Next Week")
+    tv_data = build_tv_data(current_data, next_data, today)
 
     current_data_path = OUTPUT_DIR / build_week_filename(current_week)
     next_data_path = OUTPUT_DIR / build_week_filename(next_week)
+    tv_data_path = OUTPUT_DIR / "tv.json"
     manifest_path = OUTPUT_DIR / "manifest.json"
 
     print(
         "Prepared canonical schedule data: "
         f'current_week={current_data["start"]}..{current_data["end"]} current_events={current_data["event_count"]} '
-        f'next_week={next_data["start"]}..{next_data["end"]} next_events={next_data["event_count"]}'
+        f'next_week={next_data["start"]}..{next_data["end"]} next_events={next_data["event_count"]} '
+        f'tv={tv_data["start"]}..{tv_data["end"]} tv_events={tv_data["event_count"]}'
     )
 
     current_changed = write_if_changed(
@@ -451,6 +479,11 @@ def main():
         next_data_path,
         json_bytes(next_data),
         "Next Week Data",
+    )
+    tv_changed = write_if_changed(
+        tv_data_path,
+        json_bytes(tv_data),
+        "TV Data",
     )
 
     remove_stale_outputs("week-*.json", [current_data_path, next_data_path])
@@ -464,7 +497,8 @@ def main():
 
     print(
         "Data summary: "
-        f"current_changed={current_changed} next_changed={next_changed} manifest_changed={manifest_changed}"
+        f"current_changed={current_changed} next_changed={next_changed} "
+        f"tv_changed={tv_changed} manifest_changed={manifest_changed}"
     )
 
 

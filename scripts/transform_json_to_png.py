@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import io
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -199,6 +200,30 @@ def flatten_day_events(day):
     return flattened
 
 
+def copy_day_with_events(day, events):
+    groups = []
+    event_index = 0
+    for group in day["groups"]:
+        group_events = []
+        for _event in group["events"]:
+            if event_index >= len(events):
+                break
+            group_events.append(
+                {
+                    "summary": events[event_index]["summary"],
+                    "type": events[event_index]["type"],
+                    "all_day": events[event_index]["all_day"],
+                }
+            )
+            event_index += 1
+        if group_events:
+            groups.append({**group, "events": group_events})
+        if event_index >= len(events):
+            break
+
+    return {**day, "groups": groups}
+
+
 def get_event_line_height(event_count, layout_name):
     if layout_name == "tv":
         if event_count <= 1:
@@ -216,6 +241,57 @@ def get_event_line_height(event_count, layout_name):
     if event_count == 3:
         return 22
     return 19
+
+
+def get_tv_row_height(event_count, layout):
+    text_block_height = (
+        layout["empty_day_height"]
+        if event_count == 0
+        else layout["event_pad_top"] + event_count * get_event_line_height(event_count, layout["name"])
+    )
+    return max(
+        78,
+        layout["day_pad_top"] + text_block_height + layout["day_pad_bottom"],
+    )
+
+
+def build_visible_tv_payload(payload, layout):
+    visible_days = []
+    y = layout["row_top"]
+    footer_top = layout["footer_top"]
+    min_event_row_height = get_tv_row_height(1, layout)
+
+    for day in payload["days"]:
+        day_events = flatten_day_events(day)
+        row_height = get_tv_row_height(len(day_events), layout)
+        if y + row_height <= footer_top:
+            visible_days.append(day)
+            y += row_height
+            continue
+
+        if not day_events or y + min_event_row_height > footer_top:
+            break
+
+        visible_events = []
+        for event_count in range(1, len(day_events) + 1):
+            next_height = get_tv_row_height(event_count, layout)
+            if y + next_height > footer_top:
+                break
+            visible_events = day_events[:event_count]
+
+        if visible_events:
+            visible_days.append(copy_day_with_events(day, visible_events))
+        break
+
+    if not visible_days:
+        return payload
+
+    return {
+        **payload,
+        "end": visible_days[-1]["date"],
+        "event_count": sum(len(flatten_day_events(day)) for day in visible_days),
+        "days": visible_days,
+    }
 
 
 def draw_header(image, draw, payload, layout, fonts):
@@ -463,6 +539,9 @@ def draw_schedule_rows(draw, payload, layout, fonts):
 
 
 def draw_schedule_image(output_path, payload, layout):
+    if layout["name"] == "tv":
+        payload = build_visible_tv_payload(payload, layout)
+
     image = make_background(layout["width"], layout["height"])
     draw = ImageDraw.Draw(image)
     fonts = build_fonts(layout)
@@ -482,6 +561,20 @@ def render_schedule_image(payload, layout):
 
 
 def main():
+    tv_only = "--tv-only" in sys.argv[1:]
+
+    tv_path = OUTPUT_DIR / "scheduletv.png"
+    tv_payload = load_week_payload(OUTPUT_DIR / "tv.json")
+
+    if tv_only:
+        tv_changed = write_if_changed(
+            tv_path,
+            render_schedule_image(tv_payload, TV_LAYOUT),
+            "TV Schedule",
+        )
+        print(f"Render summary: tv_changed={tv_changed}")
+        return
+
     manifest = load_week_payload(OUTPUT_DIR / "manifest.json")
 
     current_payload = load_week_payload(
@@ -494,7 +587,6 @@ def main():
     current_image_path = OUTPUT_DIR / manifest["current_week"]["filename"]
     next_image_path = OUTPUT_DIR / manifest["next_week"]["filename"]
     alias_path = OUTPUT_DIR / "schedule.png"
-    tv_path = OUTPUT_DIR / "scheduletv.png"
     alias_source_payload = (
         next_payload
         if manifest["next_week"].get("alias") == "schedule.png"
@@ -518,7 +610,7 @@ def main():
     )
     tv_changed = write_if_changed(
         tv_path,
-        render_schedule_image(alias_source_payload, TV_LAYOUT),
+        render_schedule_image(tv_payload, TV_LAYOUT),
         "TV Schedule",
     )
 
