@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-06-15",
   "end": "2026-06-21",
-  "event_count": 24,
+  "event_count": 25,
   "days": [
     {
       "date": "2026-06-15",
@@ -232,6 +232,19 @@
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-06-20T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana Pack Rush",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-20T12:00:00-06:00"
             }
           ]
         },
