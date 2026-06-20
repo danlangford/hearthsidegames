@@ -236,15 +236,15 @@
           ]
         },
         {
-          "time_sort_key": "14:00",
-          "time_label": "2 PM",
+          "time_sort_key": "16:00",
+          "time_label": "4 PM",
           "all_day": false,
           "events": [
             {
               "summary": "Lorcana - Wilds Unknown Set Champ",
               "type": "spotlight",
               "all_day": false,
-              "starts_at": "2026-06-20T14:00:00-06:00"
+              "starts_at": "2026-06-20T16:00:00-06:00"
             }
           ]
         },
