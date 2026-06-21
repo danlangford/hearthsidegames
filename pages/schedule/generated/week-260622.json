@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-06-22",
   "end": "2026-06-28",
-  "event_count": 24,
+  "event_count": 25,
   "days": [
     {
       "date": "2026-06-22",
@@ -217,6 +217,12 @@
           "events": [
             {
               "summary": "RPG 1-shot w/Dan",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-27T12:00:00-06:00"
+            },
+            {
+              "summary": "Warlord L2P",
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-06-27T12:00:00-06:00"
