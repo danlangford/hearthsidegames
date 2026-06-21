@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-06-20",
   "end": "2026-06-27",
-  "event_count": 26,
+  "event_count": 30,
   "days": [
     {
       "date": "2026-06-20",
@@ -316,6 +316,51 @@
               "type": "league",
               "all_day": true,
               "starts_at": "2026-06-27T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "RPG 1-shot w/Dan",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-27T12:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "14:00",
+          "time_label": "2 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pathfinder",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-27T14:00:00-06:00"
+            },
+            {
+              "summary": "RPG 1-shot w/Dan",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-27T14:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Starfinder",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-27T18:00:00-06:00"
             }
           ]
         },
