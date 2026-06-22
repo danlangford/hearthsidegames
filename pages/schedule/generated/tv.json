@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-06-22",
   "end": "2026-06-29",
-  "event_count": 27,
+  "event_count": 28,
   "days": [
     {
       "date": "2026-06-22",
@@ -303,6 +303,19 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-06-28T12:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Trivia night",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-28T18:00:00-06:00"
             }
           ]
         }
