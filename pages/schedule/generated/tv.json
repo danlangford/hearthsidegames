@@ -1,34 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-06-22",
-  "end": "2026-06-29",
-  "event_count": 28,
+  "start": "2026-06-23",
+  "end": "2026-06-30",
+  "event_count": 29,
   "days": [
-    {
-      "date": "2026-06-22",
-      "weekday": "MON",
-      "groups": [
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-22T19:00:00-06:00"
-            },
-            {
-              "summary": "Riftbound",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-22T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-06-23",
       "weekday": "TUE",
@@ -341,6 +316,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-06-29T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "18:30",
+          "time_label": "6:30 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Mahjong 102",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-06-30T18:30:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Union Arena",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-06-30T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer 40k",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-06-30T19:00:00-06:00"
             }
           ]
         }
