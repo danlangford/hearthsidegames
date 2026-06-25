@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-06-25",
   "end": "2026-07-02",
-  "event_count": 30,
+  "event_count": 32,
   "days": [
     {
       "date": "2026-06-25",
@@ -250,6 +250,19 @@
       "weekday": "TUE",
       "groups": [
         {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "StarCraft TMG",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-06-30T18:00:00-06:00"
+            }
+          ]
+        },
+        {
           "time_sort_key": "18:30",
           "time_label": "6:30 PM",
           "all_day": false,
@@ -292,6 +305,12 @@
           "time_label": "6 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "Kameron\u2019s Board Game Group",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-01T18:00:00-06:00"
+            },
             {
               "summary": "Pokemon",
               "type": "league",
