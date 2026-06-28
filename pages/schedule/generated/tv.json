@@ -1,98 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-06-27",
-  "end": "2026-07-04",
-  "event_count": 30,
+  "start": "2026-06-28",
+  "end": "2026-07-05",
+  "event_count": 24,
   "days": [
-    {
-      "date": "2026-06-27",
-      "weekday": "SAT",
-      "groups": [
-        {
-          "time_sort_key": "ALL_DAY",
-          "time_label": "ALL DAY",
-          "all_day": true,
-          "events": [
-            {
-              "summary": "Free RPG Day",
-              "type": "spotlight",
-              "all_day": true,
-              "starts_at": "2026-06-27T00:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Commander",
-              "type": "league",
-              "all_day": true,
-              "starts_at": "2026-06-27T00:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "12:00",
-          "time_label": "12 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "RPG 1-shot w/Dan",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-06-27T12:00:00-06:00"
-            },
-            {
-              "summary": "Warlord L2P",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-06-27T12:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "14:00",
-          "time_label": "2 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Pathfinder",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-06-27T14:00:00-06:00"
-            },
-            {
-              "summary": "RPG 1-shot w/Dan",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-06-27T14:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Starfinder",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-06-27T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "One Piece: Extended",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-27T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-06-28",
       "weekday": "SUN",
@@ -367,6 +278,38 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-04T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-05",
+      "weekday": "SUN",
+      "groups": [
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Warhammer 40k",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-05T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Gundam",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-05T12:00:00-06:00"
             }
           ]
         }
