@@ -1,54 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-06-28",
-  "end": "2026-07-05",
-  "event_count": 24,
+  "start": "2026-06-29",
+  "end": "2026-07-06",
+  "event_count": 23,
   "days": [
-    {
-      "date": "2026-06-28",
-      "weekday": "SUN",
-      "groups": [
-        {
-          "time_sort_key": "10:00",
-          "time_label": "10 AM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Warhammer 40k",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-28T10:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "12:00",
-          "time_label": "12 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Gundam",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-28T12:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Trivia night",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-06-28T18:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-06-29",
       "weekday": "MON",
@@ -310,6 +265,31 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-05T12:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-06",
+      "weekday": "MON",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-06T19:00:00-06:00"
+            },
+            {
+              "summary": "Riftbound",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-06T19:00:00-06:00"
             }
           ]
         }
