@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-07-06",
   "end": "2026-07-12",
-  "event_count": 19,
+  "event_count": 20,
   "days": [
     {
       "date": "2026-07-06",
@@ -199,6 +199,12 @@
             {
               "summary": "MTG: Commander",
               "type": "league",
+              "all_day": true,
+              "starts_at": "2026-07-11T00:00:00-06:00"
+            },
+            {
+              "summary": "Riftbound 2.5k",
+              "type": "spotlight",
               "all_day": true,
               "starts_at": "2026-07-11T00:00:00-06:00"
             }

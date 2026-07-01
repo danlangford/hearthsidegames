@@ -1,60 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-06-30",
-  "end": "2026-07-07",
-  "event_count": 24,
+  "start": "2026-07-01",
+  "end": "2026-07-08",
+  "event_count": 23,
   "days": [
-    {
-      "date": "2026-06-30",
-      "weekday": "TUE",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "StarCraft TMG",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-30T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "18:30",
-          "time_label": "6:30 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Mahjong 102",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-06-30T18:30:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Union Arena",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-30T19:00:00-06:00"
-            },
-            {
-              "summary": "Warhammer 40k",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-06-30T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-01",
       "weekday": "WED",
@@ -303,6 +252,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-07T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-08",
+      "weekday": "WED",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pokemon Pitch Black",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-08T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana Enchanted Series",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-08T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-08T19:00:00-06:00"
             }
           ]
         }
