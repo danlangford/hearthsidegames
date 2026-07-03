@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-07-06",
   "end": "2026-07-12",
-  "event_count": 20,
+  "event_count": 21,
   "days": [
     {
       "date": "2026-07-06",
@@ -116,6 +116,12 @@
           "events": [
             {
               "summary": "L2P Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-09T18:00:00-06:00"
+            },
+            {
+              "summary": "Warlord",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-09T18:00:00-06:00"
