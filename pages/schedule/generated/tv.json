@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-07-03",
-  "end": "2026-07-10",
+  "start": "2026-07-04",
+  "end": "2026-07-11",
   "event_count": 23,
   "days": [
-    {
-      "date": "2026-07-03",
-      "weekday": "FRI",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Pathfinder Society",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-03T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Z",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-03T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Draft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-03T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-04",
       "weekday": "SAT",
@@ -290,6 +252,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-10T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-07-11T00:00:00-06:00"
+            },
+            {
+              "summary": "Riftbound 2.5k",
+              "type": "spotlight",
+              "all_day": true,
+              "starts_at": "2026-07-11T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece: Extended",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-11T19:00:00-06:00"
             }
           ]
         }
