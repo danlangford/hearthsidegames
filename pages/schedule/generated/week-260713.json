@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-07-13",
   "end": "2026-07-19",
-  "event_count": 25,
+  "event_count": 26,
   "days": [
     {
       "date": "2026-07-13",
@@ -38,6 +38,12 @@
           "time_label": "6 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "Mahjong League (FULL)",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-14T18:00:00-06:00"
+            },
             {
               "summary": "StarCraft TMG",
               "type": "league",
