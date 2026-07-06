@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-07-13",
   "end": "2026-07-19",
-  "event_count": 25,
+  "event_count": 26,
   "days": [
     {
       "date": "2026-07-13",
@@ -254,6 +254,12 @@
           "time_label": "2 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "Girlie Pops MtG Bedazzled Commanders",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-18T14:00:00-06:00"
+            },
             {
               "summary": "Warlord Constructed w/Dragon Lord",
               "type": "spotlight",
