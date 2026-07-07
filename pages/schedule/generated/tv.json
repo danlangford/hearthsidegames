@@ -1,34 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-07-06",
-  "end": "2026-07-13",
-  "event_count": 23,
+  "start": "2026-07-07",
+  "end": "2026-07-14",
+  "event_count": 24,
   "days": [
-    {
-      "date": "2026-07-06",
-      "weekday": "MON",
-      "groups": [
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-06T19:00:00-06:00"
-            },
-            {
-              "summary": "Riftbound",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-06T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-07",
       "weekday": "TUE",
@@ -290,6 +265,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-13T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "18:30",
+          "time_label": "6:30 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Mahjong League (FULL)",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-14T18:30:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Union Arena",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-14T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer & StarCraft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-14T19:00:00-06:00"
             }
           ]
         }
