@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-07-10",
-  "end": "2026-07-17",
-  "event_count": 25,
+  "start": "2026-07-11",
+  "end": "2026-07-18",
+  "event_count": 29,
   "days": [
-    {
-      "date": "2026-07-10",
-      "weekday": "FRI",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Pathfinder Society",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-10T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Z",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-10T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Draft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-10T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-11",
       "weekday": "SAT",
@@ -316,6 +278,96 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-17T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-07-18T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Utah Puzzle Swap",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-18T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "UTJPA Puzzle Race",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-18T12:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "14:00",
+          "time_label": "2 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Girlie Pops MtG Bedazzled Commanders",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-18T14:00:00-06:00"
+            },
+            {
+              "summary": "Warlord Constructed w/Dragon Lord",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-18T14:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "16:00",
+          "time_label": "4 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana Pack Rush Prerelease",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-18T16:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece: Extended",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-18T19:00:00-06:00"
             }
           ]
         }
