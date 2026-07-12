@@ -1,54 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-07-11",
-  "end": "2026-07-18",
-  "event_count": 29,
+  "start": "2026-07-12",
+  "end": "2026-07-19",
+  "event_count": 28,
   "days": [
-    {
-      "date": "2026-07-11",
-      "weekday": "SAT",
-      "groups": [
-        {
-          "time_sort_key": "ALL_DAY",
-          "time_label": "ALL DAY",
-          "all_day": true,
-          "events": [
-            {
-              "summary": "MTG: Commander",
-              "type": "league",
-              "all_day": true,
-              "starts_at": "2026-07-11T00:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "10:30",
-          "time_label": "10:30 AM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Riftbound 2.5k",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-07-11T10:30:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "One Piece: Extended",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-11T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-12",
       "weekday": "SUN",
@@ -368,6 +323,38 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-18T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-19",
+      "weekday": "SUN",
+      "groups": [
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Warhammer 40k",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-19T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Gundam",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-19T12:00:00-06:00"
             }
           ]
         }
