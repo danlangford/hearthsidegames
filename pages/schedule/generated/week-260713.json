@@ -2,12 +2,25 @@
   "label": "This Week",
   "start": "2026-07-13",
   "end": "2026-07-19",
-  "event_count": 26,
+  "event_count": 28,
   "days": [
     {
       "date": "2026-07-13",
       "weekday": "MON",
       "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Power Chess open play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-13T18:00:00-06:00"
+            }
+          ]
+        },
         {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
@@ -323,6 +336,19 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-19T12:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "13:00",
+          "time_label": "1 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Power Chess open play",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-19T13:00:00-06:00"
             }
           ]
         }
