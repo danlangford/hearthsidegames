@@ -14,7 +14,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Power Chess open play",
+              "summary": "Chess open play w/ power-chess.com",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-20T18:00:00-06:00"
@@ -280,7 +280,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Power Chess open play",
+              "summary": "Chess open play w/power-chess.com",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-26T13:00:00-06:00"
