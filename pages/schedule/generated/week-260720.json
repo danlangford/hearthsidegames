@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-07-20",
   "end": "2026-07-26",
-  "event_count": 23,
+  "event_count": 25,
   "days": [
     {
       "date": "2026-07-20",
@@ -230,6 +230,19 @@
           ]
         },
         {
+          "time_sort_key": "11:00",
+          "time_label": "11 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Modern RCQ",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-25T11:00:00-06:00"
+            }
+          ]
+        },
+        {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
           "all_day": false,
@@ -258,6 +271,19 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-26T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "11:00",
+          "time_label": "11 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Modern Free RCQ",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-26T11:00:00-06:00"
             }
           ]
         },
