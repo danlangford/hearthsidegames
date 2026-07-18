@@ -1,60 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-07-17",
-  "end": "2026-07-24",
+  "start": "2026-07-18",
+  "end": "2026-07-25",
   "event_count": 31,
   "days": [
-    {
-      "date": "2026-07-17",
-      "weekday": "FRI",
-      "groups": [
-        {
-          "time_sort_key": "00:00",
-          "time_label": "12 AM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana Pre-Release",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-07-17T00:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Pathfinder Society",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-17T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Z",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-17T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Draft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-17T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-18",
       "weekday": "SAT",
@@ -387,6 +336,57 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-24T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "BBQ",
+              "type": "spotlight",
+              "all_day": true,
+              "starts_at": "2026-07-25T00:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-07-25T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "11:00",
+          "time_label": "11 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Modern RCQ",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-25T11:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece: Extended",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-25T19:00:00-06:00"
             }
           ]
         }
