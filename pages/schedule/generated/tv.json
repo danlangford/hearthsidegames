@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-07-20",
-  "end": "2026-07-27",
+  "start": "2026-07-21",
+  "end": "2026-07-28",
   "event_count": 29,
   "days": [
-    {
-      "date": "2026-07-20",
-      "weekday": "MON",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Chess open play w/ power-chess.com",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-20T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-20T19:00:00-06:00"
-            },
-            {
-              "summary": "Riftbound",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-20T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-21",
       "weekday": "TUE",
@@ -306,7 +268,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Chess open play w/power-chess.com",
+              "summary": "Chess open play w/PowerChess",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-26T13:00:00-06:00"
@@ -325,7 +287,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Chess open play w/ power-chess.com",
+              "summary": "Chess open play w/PowerChess",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-27T18:00:00-06:00"
@@ -354,6 +316,44 @@
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-07-27T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "18:30",
+          "time_label": "6:30 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Mahjong League (FULL)",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-07-28T18:30:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Union Arena",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-28T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer & StarCraft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-28T19:00:00-06:00"
             }
           ]
         }
