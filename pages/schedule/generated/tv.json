@@ -77,6 +77,12 @@
               "starts_at": "2026-07-23T19:00:00-06:00"
             },
             {
+              "summary": "MtG: Pauper",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-23T19:00:00-06:00"
+            },
+            {
               "summary": "One Piece: Standard",
               "type": "league",
               "all_day": false,
@@ -139,12 +145,6 @@
           "time_label": "ALL DAY",
           "all_day": true,
           "events": [
-            {
-              "summary": "BBQ",
-              "type": "spotlight",
-              "all_day": true,
-              "starts_at": "2026-07-25T00:00:00-06:00"
-            },
             {
               "summary": "MTG: Commander",
               "type": "league",
