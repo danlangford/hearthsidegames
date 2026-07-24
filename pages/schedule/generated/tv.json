@@ -1,65 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-07-23",
-  "end": "2026-07-30",
-  "event_count": 31,
+  "start": "2026-07-24",
+  "end": "2026-07-31",
+  "event_count": 28,
   "days": [
-    {
-      "date": "2026-07-23",
-      "weekday": "THU",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "L2P Netrunner",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-23T18:00:00-06:00"
-            },
-            {
-              "summary": "Warlord",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-23T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Digimon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-23T19:00:00-06:00"
-            },
-            {
-              "summary": "MtG: Pauper",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-23T19:00:00-06:00"
-            },
-            {
-              "summary": "One Piece: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-23T19:00:00-06:00"
-            },
-            {
-              "summary": "Star Wars Unlimited: Premier constructed",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-23T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-24",
       "weekday": "FRI",
@@ -366,6 +310,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-07-30T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "weekday": "FRI",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pathfinder Society",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-31T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Z",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-31T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-07-31T19:00:00-06:00"
             }
           ]
         }
