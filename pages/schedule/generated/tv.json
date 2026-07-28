@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-07-27",
-  "end": "2026-08-03",
-  "event_count": 26,
+  "start": "2026-07-28",
+  "end": "2026-08-04",
+  "event_count": 25,
   "days": [
-    {
-      "date": "2026-07-27",
-      "weekday": "MON",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Chess open play w/PowerChess",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-27T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-07-27T19:00:00-06:00"
-            },
-            {
-              "summary": "Riftbound Vendetta Pre-Rift",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-07-27T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-07-28",
       "weekday": "TUE",
@@ -322,6 +284,31 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-08-03T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Union Arena",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-04T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer & StarCraft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-04T19:00:00-06:00"
             }
           ]
         }
