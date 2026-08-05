@@ -1,40 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-08-04",
-  "end": "2026-08-11",
+  "start": "2026-08-05",
+  "end": "2026-08-12",
   "event_count": 25,
   "days": [
-    {
-      "date": "2026-08-04",
-      "weekday": "TUE",
-      "groups": [
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Mahjong Open Play",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-08-04T19:00:00-06:00"
-            },
-            {
-              "summary": "Union Arena",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-04T19:00:00-06:00"
-            },
-            {
-              "summary": "Warhammer & StarCraft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-04T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-08-05",
       "weekday": "WED",
@@ -295,6 +264,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-08-11T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "weekday": "WED",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pokemon",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-12T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana Enchanted Series",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-12T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-12T19:00:00-06:00"
             }
           ]
         }
