@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-08-19",
-  "end": "2026-08-26",
-  "event_count": 27,
+  "start": "2026-08-20",
+  "end": "2026-08-27",
+  "event_count": 29,
   "days": [
-    {
-      "date": "2026-08-19",
-      "weekday": "WED",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Pokemon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-19T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana Heroines Series",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-19T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-19T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-08-20",
       "weekday": "THU",
@@ -335,6 +297,56 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-08-26T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "weekday": "THU",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "L2P Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-27T18:00:00-06:00"
+            },
+            {
+              "summary": "Warlord",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-27T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Digimon",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-27T19:00:00-06:00"
+            },
+            {
+              "summary": "One Piece: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-27T19:00:00-06:00"
+            },
+            {
+              "summary": "Star Wars Unlimited: Premier constructed",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-27T19:00:00-06:00"
             }
           ]
         }
