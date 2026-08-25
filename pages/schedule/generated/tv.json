@@ -1,60 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-08-24",
-  "end": "2026-08-31",
-  "event_count": 26,
+  "start": "2026-08-25",
+  "end": "2026-09-01",
+  "event_count": 24,
   "days": [
-    {
-      "date": "2026-08-24",
-      "weekday": "MON",
-      "groups": [
-        {
-          "time_sort_key": "10:00",
-          "time_label": "10 AM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "IPPA Image Competition",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-08-24T10:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Chess open play w/PowerChess",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-24T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-24T19:00:00-06:00"
-            },
-            {
-              "summary": "Riftbound",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-24T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-08-25",
       "weekday": "TUE",
@@ -322,6 +271,31 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-08-31T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Union Arena",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-01T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer & StarCraft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-01T19:00:00-06:00"
             }
           ]
         }
