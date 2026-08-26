@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-08-31",
   "end": "2026-09-06",
-  "event_count": 21,
+  "event_count": 22,
   "days": [
     {
       "date": "2026-08-31",
@@ -263,6 +263,12 @@
             {
               "summary": "Chess open play w/PowerChess",
               "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-06T13:00:00-06:00"
+            },
+            {
+              "summary": "Girliepop Commander",
+              "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-09-06T13:00:00-06:00"
             }
