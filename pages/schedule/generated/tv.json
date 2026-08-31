@@ -22,19 +22,6 @@
           ]
         },
         {
-          "time_sort_key": "12:00",
-          "time_label": "12 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Gundam",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-08-30T12:00:00-06:00"
-            }
-          ]
-        },
-        {
           "time_sort_key": "13:00",
           "time_label": "1 PM",
           "all_day": false,
@@ -44,6 +31,19 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-08-30T13:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Gundam",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-08-30T19:00:00-06:00"
             }
           ]
         }
@@ -288,19 +288,6 @@
           ]
         },
         {
-          "time_sort_key": "12:00",
-          "time_label": "12 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Gundam",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-06T12:00:00-06:00"
-            }
-          ]
-        },
-        {
           "time_sort_key": "13:00",
           "time_label": "1 PM",
           "all_day": false,
@@ -316,6 +303,19 @@
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-09-06T13:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Gundam",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-06T19:00:00-06:00"
             }
           ]
         }
