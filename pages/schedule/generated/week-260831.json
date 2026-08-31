@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-08-31",
   "end": "2026-09-06",
-  "event_count": 22,
+  "event_count": 23,
   "days": [
     {
       "date": "2026-08-31",
@@ -51,6 +51,12 @@
           "time_label": "7 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "Mahjong Open Play",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-09-01T19:00:00-06:00"
+            },
             {
               "summary": "Union Arena",
               "type": "league",
