@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-09-02",
   "end": "2026-09-09",
-  "event_count": 25,
+  "event_count": 26,
   "days": [
     {
       "date": "2026-09-02",
@@ -182,6 +182,19 @@
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-09-06T13:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "13:30",
+          "time_label": "1:30 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pathfinder Adventure Card Game",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-09-06T13:30:00-06:00"
             }
           ]
         },
