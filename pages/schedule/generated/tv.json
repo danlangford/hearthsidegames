@@ -1,34 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-09-04",
-  "end": "2026-09-11",
-  "event_count": 26,
+  "start": "2026-09-05",
+  "end": "2026-09-12",
+  "event_count": 27,
   "days": [
-    {
-      "date": "2026-09-04",
-      "weekday": "FRI",
-      "groups": [
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Z",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-04T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Draft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-04T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-09-05",
       "weekday": "SAT",
@@ -315,6 +290,51 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-09-11T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-09-12T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Chess tournament w/PowerChess",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-09-12T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece: Extended",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-12T19:00:00-06:00"
             }
           ]
         }
