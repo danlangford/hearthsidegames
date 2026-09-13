@@ -1,54 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-09-12",
-  "end": "2026-09-19",
+  "start": "2026-09-13",
+  "end": "2026-09-20",
   "event_count": 27,
   "days": [
-    {
-      "date": "2026-09-12",
-      "weekday": "SAT",
-      "groups": [
-        {
-          "time_sort_key": "ALL_DAY",
-          "time_label": "ALL DAY",
-          "all_day": true,
-          "events": [
-            {
-              "summary": "MTG: Commander",
-              "type": "league",
-              "all_day": true,
-              "starts_at": "2026-09-12T00:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "10:00",
-          "time_label": "10 AM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Chess tournament w/PowerChess",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-09-12T10:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "One Piece: Extended",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-12T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-09-13",
       "weekday": "SUN",
@@ -342,6 +297,51 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-09-19T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "weekday": "SUN",
+      "groups": [
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Warhammer 40k",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-20T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "13:00",
+          "time_label": "1 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Chess open play w/PowerChess",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-20T13:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Gundam",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-20T19:00:00-06:00"
             }
           ]
         }
