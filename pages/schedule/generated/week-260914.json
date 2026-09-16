@@ -230,15 +230,15 @@
           ]
         },
         {
-          "time_sort_key": "12:00",
-          "time_label": "12 PM",
+          "time_sort_key": "13:00",
+          "time_label": "1 PM",
           "all_day": false,
           "events": [
             {
               "summary": "StarCraft TMG tournament",
               "type": "spotlight",
               "all_day": false,
-              "starts_at": "2026-09-19T12:00:00-06:00"
+              "starts_at": "2026-09-19T13:00:00-06:00"
             }
           ]
         },
