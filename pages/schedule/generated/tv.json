@@ -1,59 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-09-24",
-  "end": "2026-10-01",
-  "event_count": 28,
+  "start": "2026-09-25",
+  "end": "2026-10-02",
+  "event_count": 26,
   "days": [
-    {
-      "date": "2026-09-24",
-      "weekday": "THU",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana [Format Coconut]",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-24T18:00:00-06:00"
-            },
-            {
-              "summary": "Warlord & Netrunner",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-24T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Digimon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-24T19:00:00-06:00"
-            },
-            {
-              "summary": "One Piece: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-24T19:00:00-06:00"
-            },
-            {
-              "summary": "Star Wars Unlimited: Premier constructed",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-24T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-09-25",
       "weekday": "FRI",
@@ -334,6 +284,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-01T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "weekday": "FRI",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pathfinder Society",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-02T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Z",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-02T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Reality Fracture prerelease",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-02T19:00:00-06:00"
             }
           ]
         }
