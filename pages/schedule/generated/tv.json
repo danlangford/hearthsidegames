@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-09-27",
   "end": "2026-10-04",
-  "event_count": 25,
+  "event_count": 26,
   "days": [
     {
       "date": "2026-09-27",
@@ -140,6 +140,12 @@
           "time_label": "7 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "Cyberpunk TCG",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-09-30T19:00:00-06:00"
+            },
             {
               "summary": "Lorcana D23 Series",
               "type": "league",
