@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-09-28",
   "end": "2026-10-05",
-  "event_count": 26,
+  "event_count": 25,
   "days": [
     {
       "date": "2026-09-28",
@@ -153,12 +153,6 @@
             },
             {
               "summary": "One Piece: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-01T19:00:00-06:00"
-            },
-            {
-              "summary": "Star Wars Unlimited: Premier constructed",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-01T19:00:00-06:00"
