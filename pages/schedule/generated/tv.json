@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-09-28",
-  "end": "2026-10-05",
-  "event_count": 25,
+  "start": "2026-09-29",
+  "end": "2026-10-06",
+  "event_count": 24,
   "days": [
-    {
-      "date": "2026-09-28",
-      "weekday": "MON",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Chess open play w/PowerChess",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-28T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-28T19:00:00-06:00"
-            },
-            {
-              "summary": "Riftbound",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-28T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-09-29",
       "weekday": "TUE",
@@ -309,6 +271,31 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-05T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Union Arena",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-06T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer & StarCraft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-06T19:00:00-06:00"
             }
           ]
         }
