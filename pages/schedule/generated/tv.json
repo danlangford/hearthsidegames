@@ -1,53 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-09-30",
-  "end": "2026-10-07",
+  "start": "2026-10-01",
+  "end": "2026-10-08",
   "event_count": 25,
   "days": [
-    {
-      "date": "2026-09-30",
-      "weekday": "WED",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Pokemon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-30T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Cyberpunk TCG",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-30T19:00:00-06:00"
-            },
-            {
-              "summary": "Lorcana D23 Series",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-30T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-09-30T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-01",
       "weekday": "THU",
@@ -309,6 +265,50 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-07T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "THU",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana [Format Coconut]",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-08T18:00:00-06:00"
+            },
+            {
+              "summary": "Warlord & Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-08T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Digimon",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-08T19:00:00-06:00"
+            },
+            {
+              "summary": "One Piece: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-08T19:00:00-06:00"
             }
           ]
         }
