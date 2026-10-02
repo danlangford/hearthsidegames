@@ -127,12 +127,6 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Lorcana [Format Coconut]",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-01T18:00:00-06:00"
-            },
-            {
               "summary": "Warlord & Netrunner",
               "type": "league",
               "all_day": false,
@@ -170,6 +164,12 @@
           "time_label": "6 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "Lorcana - The Great Hunny Rescue",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-02T18:00:00-06:00"
+            },
             {
               "summary": "Pathfinder Society",
               "type": "league",
