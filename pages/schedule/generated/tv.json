@@ -1,53 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-01",
-  "end": "2026-10-08",
-  "event_count": 25,
+  "start": "2026-10-02",
+  "end": "2026-10-09",
+  "event_count": 24,
   "days": [
-    {
-      "date": "2026-10-01",
-      "weekday": "THU",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana [Format Coconut]",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-01T18:00:00-06:00"
-            },
-            {
-              "summary": "Warlord & Netrunner",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-01T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Digimon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-01T19:00:00-06:00"
-            },
-            {
-              "summary": "One Piece: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-01T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-02",
       "weekday": "FRI",
@@ -309,6 +265,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-08T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "FRI",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pathfinder Society",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-09T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Z",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-09T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-09T19:00:00-06:00"
             }
           ]
         }
