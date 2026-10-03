@@ -1,53 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-02",
-  "end": "2026-10-09",
+  "start": "2026-10-03",
+  "end": "2026-10-10",
   "event_count": 25,
   "days": [
-    {
-      "date": "2026-10-02",
-      "weekday": "FRI",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana - The Great Hunny Rescue",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-10-02T18:00:00-06:00"
-            },
-            {
-              "summary": "Pathfinder Society",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-02T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Z",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-02T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Draft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-02T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-03",
       "weekday": "SAT",
@@ -316,6 +272,64 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-09T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-10-10T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "UTJPA Puzzle Race",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-10T10:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "13:00",
+          "time_label": "1 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Chess Halloween tournament",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-10T13:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece: Extended",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-10T19:00:00-06:00"
             }
           ]
         }
