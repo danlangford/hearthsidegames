@@ -90,7 +90,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Pokemon",
+              "summary": "Pokemon Challenge",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-14T18:00:00-06:00"
