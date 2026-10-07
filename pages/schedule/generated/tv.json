@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-06",
-  "end": "2026-10-13",
+  "start": "2026-10-07",
+  "end": "2026-10-14",
   "event_count": 26,
   "days": [
-    {
-      "date": "2026-10-06",
-      "weekday": "TUE",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Cyberpunk TCG",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-06T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Union Arena",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-06T19:00:00-06:00"
-            },
-            {
-              "summary": "Warhammer & StarCraft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-06T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-07",
       "weekday": "WED",
@@ -336,6 +298,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-13T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "weekday": "WED",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pokemon Challenge",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-14T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana D23 Series",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-14T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-14T19:00:00-06:00"
             }
           ]
         }
