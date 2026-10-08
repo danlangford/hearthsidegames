@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-07",
-  "end": "2026-10-14",
-  "event_count": 26,
+  "start": "2026-10-08",
+  "end": "2026-10-15",
+  "event_count": 27,
   "days": [
-    {
-      "date": "2026-10-07",
-      "weekday": "WED",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Pokemon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-07T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana D23 Series",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-07T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-07T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-08",
       "weekday": "THU",
@@ -336,6 +298,57 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-14T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "THU",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Warlord & Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-15T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Digimon",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-15T19:00:00-06:00"
+            },
+            {
+              "summary": "One Piece: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-15T19:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "23:30",
+          "time_label": "11:30 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana Hyperion City midnight release",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-15T23:30:00-06:00"
             }
           ]
         }
