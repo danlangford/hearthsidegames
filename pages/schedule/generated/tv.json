@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-10-09",
   "end": "2026-10-16",
-  "event_count": 26,
+  "event_count": 25,
   "days": [
     {
       "date": "2026-10-09",
@@ -62,19 +62,6 @@
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-10-10T09:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "13:00",
-          "time_label": "1 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Chess Halloween tournament",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-10-10T13:00:00-06:00"
             }
           ]
         },
