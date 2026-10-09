@@ -1,53 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-08",
-  "end": "2026-10-15",
-  "event_count": 27,
+  "start": "2026-10-09",
+  "end": "2026-10-16",
+  "event_count": 26,
   "days": [
-    {
-      "date": "2026-10-08",
-      "weekday": "THU",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana [Format Coconut]",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-08T18:00:00-06:00"
-            },
-            {
-              "summary": "Warlord & Netrunner",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-08T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Digimon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-08T19:00:00-06:00"
-            },
-            {
-              "summary": "One Piece: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-08T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-09",
       "weekday": "FRI",
@@ -342,6 +298,37 @@
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-10-15T23:30:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "weekday": "FRI",
+      "groups": [
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Z",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-16T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-16T19:00:00-06:00"
+            },
+            {
+              "summary": "Utah Pathfinder League",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-16T19:00:00-06:00"
             }
           ]
         }
