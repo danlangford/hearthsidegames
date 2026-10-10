@@ -1,40 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-09",
-  "end": "2026-10-16",
+  "start": "2026-10-10",
+  "end": "2026-10-17",
   "event_count": 25,
   "days": [
-    {
-      "date": "2026-10-09",
-      "weekday": "FRI",
-      "groups": [
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Z",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-09T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Draft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-09T19:00:00-06:00"
-            },
-            {
-              "summary": "Utah Pathfinder League",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-09T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-10",
       "weekday": "SAT",
@@ -316,6 +285,51 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-16T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-10-17T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece TCG Store Championship",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-17T12:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "One Piece: Extended",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-17T19:00:00-06:00"
             }
           ]
         }
