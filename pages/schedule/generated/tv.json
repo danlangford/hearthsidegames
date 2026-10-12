@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-10-12",
   "end": "2026-10-19",
-  "event_count": 25,
+  "event_count": 26,
   "days": [
     {
       "date": "2026-10-12",
@@ -315,6 +315,12 @@
             {
               "summary": "Lorcana",
               "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-19T19:00:00-06:00"
+            },
+            {
+              "summary": "Radiance Pre-Rift",
+              "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-10-19T19:00:00-06:00"
             },
