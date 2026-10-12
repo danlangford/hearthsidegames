@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-10-12",
   "end": "2026-10-18",
-  "event_count": 22,
+  "event_count": 24,
   "days": [
     {
       "date": "2026-10-12",
@@ -65,13 +65,19 @@
           "all_day": false,
           "events": [
             {
+              "summary": "Dragon Ball Super Fusion World",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-13T19:00:00-06:00"
+            },
+            {
               "summary": "Union Arena",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-13T19:00:00-06:00"
             },
             {
-              "summary": "Warhammer & StarCraft",
+              "summary": "Warhammer & StarCraft TMG",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-13T19:00:00-06:00"
@@ -235,6 +241,12 @@
           "time_label": "7 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "MTG Draft",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-17T19:00:00-06:00"
+            },
             {
               "summary": "One Piece: Extended",
               "type": "league",

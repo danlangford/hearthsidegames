@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-10-19",
   "end": "2026-10-25",
-  "event_count": 22,
+  "event_count": 26,
   "days": [
     {
       "date": "2026-10-19",
@@ -71,13 +71,19 @@
           "all_day": false,
           "events": [
             {
+              "summary": "Dragon Ball Super Fusion World",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-20T19:00:00-06:00"
+            },
+            {
               "summary": "Union Arena",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-20T19:00:00-06:00"
             },
             {
-              "summary": "Warhammer & StarCraft",
+              "summary": "Warhammer & StarCraft TMG",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-20T19:00:00-06:00"
@@ -167,6 +173,19 @@
       "weekday": "FRI",
       "groups": [
         {
+          "time_sort_key": "17:00",
+          "time_label": "5 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Commander Party",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-23T17:00:00-06:00"
+            }
+          ]
+        },
+        {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
           "all_day": false,
@@ -224,10 +243,29 @@
           ]
         },
         {
+          "time_sort_key": "17:00",
+          "time_label": "5 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Commander Party",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-24T17:00:00-06:00"
+            }
+          ]
+        },
+        {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "MTG Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-24T19:00:00-06:00"
+            },
             {
               "summary": "One Piece: Extended",
               "type": "league",
