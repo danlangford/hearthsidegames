@@ -1,11 +1,11 @@
 {
-  "label": "This Week",
-  "start": "2026-10-05",
-  "end": "2026-10-11",
-  "event_count": 22,
+  "label": "Next Week",
+  "start": "2026-10-19",
+  "end": "2026-10-25",
+  "event_count": 21,
   "days": [
     {
-      "date": "2026-10-05",
+      "date": "2026-10-19",
       "weekday": "MON",
       "groups": [
         {
@@ -17,7 +17,7 @@
               "summary": "Chess open play w/PowerChess",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-05T18:00:00-06:00"
+              "starts_at": "2026-10-19T18:00:00-06:00"
             }
           ]
         },
@@ -30,20 +30,20 @@
               "summary": "Lorcana",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-05T19:00:00-06:00"
+              "starts_at": "2026-10-19T19:00:00-06:00"
             },
             {
               "summary": "Riftbound",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-05T19:00:00-06:00"
+              "starts_at": "2026-10-19T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-10-06",
+      "date": "2026-10-20",
       "weekday": "TUE",
       "groups": [
         {
@@ -55,7 +55,7 @@
               "summary": "Cyberpunk TCG",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-06T18:00:00-06:00"
+              "starts_at": "2026-10-20T18:00:00-06:00"
             }
           ]
         },
@@ -68,20 +68,20 @@
               "summary": "Union Arena",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-06T19:00:00-06:00"
+              "starts_at": "2026-10-20T19:00:00-06:00"
             },
             {
               "summary": "Warhammer & StarCraft",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-06T19:00:00-06:00"
+              "starts_at": "2026-10-20T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-10-07",
+      "date": "2026-10-21",
       "weekday": "WED",
       "groups": [
         {
@@ -90,10 +90,10 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Pokemon",
+              "summary": "Pok\u00e9ween",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-07T18:00:00-06:00"
+              "starts_at": "2026-10-21T18:00:00-06:00"
             }
           ]
         },
@@ -106,20 +106,20 @@
               "summary": "Lorcana D23 Series",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-07T19:00:00-06:00"
+              "starts_at": "2026-10-21T19:00:00-06:00"
             },
             {
               "summary": "MTG: Standard",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-07T19:00:00-06:00"
+              "starts_at": "2026-10-21T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-10-08",
+      "date": "2026-10-22",
       "weekday": "THU",
       "groups": [
         {
@@ -128,16 +128,10 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Lorcana [Format Coconut]",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-08T18:00:00-06:00"
-            },
-            {
               "summary": "Warlord & Netrunner",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-08T18:00:00-06:00"
+              "starts_at": "2026-10-22T18:00:00-06:00"
             }
           ]
         },
@@ -150,20 +144,20 @@
               "summary": "Digimon",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-08T19:00:00-06:00"
+              "starts_at": "2026-10-22T19:00:00-06:00"
             },
             {
               "summary": "One Piece: Standard",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-08T19:00:00-06:00"
+              "starts_at": "2026-10-22T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-10-09",
+      "date": "2026-10-23",
       "weekday": "FRI",
       "groups": [
         {
@@ -175,26 +169,26 @@
               "summary": "Dragon Ball Z",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-09T19:00:00-06:00"
+              "starts_at": "2026-10-23T19:00:00-06:00"
             },
             {
               "summary": "MTG: Draft",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-09T19:00:00-06:00"
+              "starts_at": "2026-10-23T19:00:00-06:00"
             },
             {
               "summary": "Utah Pathfinder League",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-09T19:00:00-06:00"
+              "starts_at": "2026-10-23T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-10-10",
+      "date": "2026-10-24",
       "weekday": "SAT",
       "groups": [
         {
@@ -206,20 +200,20 @@
               "summary": "MTG: Commander",
               "type": "league",
               "all_day": true,
-              "starts_at": "2026-10-10T00:00:00-06:00"
+              "starts_at": "2026-10-24T00:00:00-06:00"
             }
           ]
         },
         {
-          "time_sort_key": "09:00",
-          "time_label": "9 AM",
+          "time_sort_key": "12:00",
+          "time_label": "12 PM",
           "all_day": false,
           "events": [
             {
-              "summary": "UTJPA Puzzle Race",
+              "summary": "Puzzle Swap",
               "type": "spotlight",
               "all_day": false,
-              "starts_at": "2026-10-10T09:00:00-06:00"
+              "starts_at": "2026-10-24T12:00:00-06:00"
             }
           ]
         },
@@ -232,14 +226,14 @@
               "summary": "One Piece: Extended",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-10T19:00:00-06:00"
+              "starts_at": "2026-10-24T19:00:00-06:00"
             }
           ]
         }
       ]
     },
     {
-      "date": "2026-10-11",
+      "date": "2026-10-25",
       "weekday": "SUN",
       "groups": [
         {
@@ -251,7 +245,7 @@
               "summary": "Warhammer 40k",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-11T10:00:00-06:00"
+              "starts_at": "2026-10-25T10:00:00-06:00"
             }
           ]
         },
@@ -264,7 +258,7 @@
               "summary": "Chess open play w/PowerChess",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-11T13:00:00-06:00"
+              "starts_at": "2026-10-25T13:00:00-06:00"
             }
           ]
         },
@@ -277,7 +271,7 @@
               "summary": "Gundam",
               "type": "league",
               "all_day": false,
-              "starts_at": "2026-10-11T19:00:00-06:00"
+              "starts_at": "2026-10-25T19:00:00-06:00"
             }
           ]
         }
