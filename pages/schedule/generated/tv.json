@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-12",
-  "end": "2026-10-19",
-  "event_count": 28,
+  "start": "2026-10-13",
+  "end": "2026-10-20",
+  "event_count": 29,
   "days": [
-    {
-      "date": "2026-10-12",
-      "weekday": "MON",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Chess open play w/PowerChess",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-12T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-12T19:00:00-06:00"
-            },
-            {
-              "summary": "Riftbound",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-12T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-13",
       "weekday": "TUE",
@@ -341,6 +303,50 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-19T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Cyberpunk TCG",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-20T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Super Fusion World",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-20T19:00:00-06:00"
+            },
+            {
+              "summary": "Union Arena",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-20T19:00:00-06:00"
+            },
+            {
+              "summary": "Warhammer & StarCraft TMG",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-20T19:00:00-06:00"
             }
           ]
         }
