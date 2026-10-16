@@ -1,60 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-15",
-  "end": "2026-10-22",
+  "start": "2026-10-16",
+  "end": "2026-10-23",
   "event_count": 28,
   "days": [
-    {
-      "date": "2026-10-15",
-      "weekday": "THU",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Warlord & Netrunner",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-15T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Digimon",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-15T19:00:00-06:00"
-            },
-            {
-              "summary": "One Piece: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-15T19:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "23:30",
-          "time_label": "11:30 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana Hyperion City midnight release",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-10-15T23:30:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-16",
       "weekday": "FRI",
@@ -341,6 +290,50 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-22T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "weekday": "FRI",
+      "groups": [
+        {
+          "time_sort_key": "17:00",
+          "time_label": "5 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Commander Party",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-10-23T17:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Z",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-23T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-23T19:00:00-06:00"
+            },
+            {
+              "summary": "Utah Pathfinder League",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-23T19:00:00-06:00"
             }
           ]
         }
