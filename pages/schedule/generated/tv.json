@@ -1,53 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-20",
-  "end": "2026-10-27",
-  "event_count": 29,
+  "start": "2026-10-21",
+  "end": "2026-10-28",
+  "event_count": 28,
   "days": [
-    {
-      "date": "2026-10-20",
-      "weekday": "TUE",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Cyberpunk TCG",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-20T18:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Super Fusion World",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-20T19:00:00-06:00"
-            },
-            {
-              "summary": "Union Arena",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-20T19:00:00-06:00"
-            },
-            {
-              "summary": "Warhammer & StarCraft TMG",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-20T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-21",
       "weekday": "WED",
@@ -354,6 +310,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-27T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "weekday": "WED",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pok\u00e9mon Delta Reign Prerelease",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-28T18:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana D23 Series",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-28T19:00:00-06:00"
+            },
+            {
+              "summary": "MTG: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-28T19:00:00-06:00"
             }
           ]
         }
