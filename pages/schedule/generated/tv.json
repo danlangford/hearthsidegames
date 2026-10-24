@@ -1,53 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-23",
-  "end": "2026-10-30",
-  "event_count": 28,
+  "start": "2026-10-24",
+  "end": "2026-10-31",
+  "event_count": 27,
   "days": [
-    {
-      "date": "2026-10-23",
-      "weekday": "FRI",
-      "groups": [
-        {
-          "time_sort_key": "17:00",
-          "time_label": "5 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Commander Party",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-10-23T17:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Z",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-23T19:00:00-06:00"
-            },
-            {
-              "summary": "MTG: Draft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-23T19:00:00-06:00"
-            },
-            {
-              "summary": "Utah Pathfinder League",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-23T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-24",
       "weekday": "SAT",
@@ -341,6 +297,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-30T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "weekday": "SAT",
+      "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "MTG: Commander",
+              "type": "league",
+              "all_day": true,
+              "starts_at": "2026-10-31T00:00:00-06:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "MTG Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-31T19:00:00-06:00"
+            },
+            {
+              "summary": "One Piece: Extended",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-31T19:00:00-06:00"
             }
           ]
         }
