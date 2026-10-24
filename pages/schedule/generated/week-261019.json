@@ -2,7 +2,7 @@
   "label": "This Week",
   "start": "2026-10-19",
   "end": "2026-10-25",
-  "event_count": 27,
+  "event_count": 28,
   "days": [
     {
       "date": "2026-10-19",
@@ -172,6 +172,19 @@
       "date": "2026-10-23",
       "weekday": "FRI",
       "groups": [
+        {
+          "time_sort_key": "14:00",
+          "time_label": "2 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Mahjong Richii",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-10-23T14:00:00-06:00"
+            }
+          ]
+        },
         {
           "time_sort_key": "17:00",
           "time_label": "5 PM",
