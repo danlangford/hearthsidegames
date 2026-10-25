@@ -1,73 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-10-24",
-  "end": "2026-10-31",
-  "event_count": 29,
+  "start": "2026-10-25",
+  "end": "2026-11-01",
+  "event_count": 27,
   "days": [
-    {
-      "date": "2026-10-24",
-      "weekday": "SAT",
-      "groups": [
-        {
-          "time_sort_key": "ALL_DAY",
-          "time_label": "ALL DAY",
-          "all_day": true,
-          "events": [
-            {
-              "summary": "MTG: Commander",
-              "type": "league",
-              "all_day": true,
-              "starts_at": "2026-10-24T00:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "12:00",
-          "time_label": "12 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Puzzle Swap",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-10-24T12:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "17:00",
-          "time_label": "5 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Commander Party",
-              "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-10-24T17:00:00-06:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "MTG Draft",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-24T19:00:00-06:00"
-            },
-            {
-              "summary": "One Piece: Extended",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-10-24T19:00:00-06:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-10-25",
       "weekday": "SUN",
@@ -361,6 +297,51 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-10-31T19:00:00-06:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "weekday": "SUN",
+      "groups": [
+        {
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Warhammer 40k",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-01T10:00:00-07:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "13:00",
+          "time_label": "1 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Chess open play w/PowerChess",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-01T13:00:00-07:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Gundam",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-01T19:00:00-07:00"
             }
           ]
         }
