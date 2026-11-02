@@ -2,7 +2,7 @@
   "label": "Upcoming Events",
   "start": "2026-11-02",
   "end": "2026-11-09",
-  "event_count": 27,
+  "event_count": 28,
   "days": [
     {
       "date": "2026-11-02",
@@ -193,6 +193,12 @@
             {
               "summary": "MTG: Draft",
               "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-06T19:00:00-07:00"
+            },
+            {
+              "summary": "Star Trek Prerelease",
+              "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-11-06T19:00:00-07:00"
             },
