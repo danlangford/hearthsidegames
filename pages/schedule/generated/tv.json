@@ -1,53 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-11-03",
-  "end": "2026-11-10",
-  "event_count": 30,
+  "start": "2026-11-04",
+  "end": "2026-11-11",
+  "event_count": 29,
   "days": [
-    {
-      "date": "2026-11-03",
-      "weekday": "TUE",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Cyberpunk TCG",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-03T18:00:00-07:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Dragon Ball Super Fusion World",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-03T19:00:00-07:00"
-            },
-            {
-              "summary": "Union Arena",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-03T19:00:00-07:00"
-            },
-            {
-              "summary": "Warhammer & StarCraft TMG",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-03T19:00:00-07:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-11-04",
       "weekday": "WED",
@@ -353,6 +309,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-11-10T19:00:00-07:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": "WED",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Pok\u00e9mon - Ditto Draft",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-11T18:00:00-07:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Lorcana Beauty and The Beast Series",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-11T19:00:00-07:00"
+            },
+            {
+              "summary": "MTG: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-11T19:00:00-07:00"
             }
           ]
         }
