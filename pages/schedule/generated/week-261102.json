@@ -191,13 +191,13 @@
               "starts_at": "2026-11-06T19:00:00-07:00"
             },
             {
-              "summary": "MTG: Draft",
+              "summary": "MTG Draft",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-11-06T19:00:00-07:00"
             },
             {
-              "summary": "Star Trek Prerelease",
+              "summary": "MTG Star Trek Prerelease",
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-11-06T19:00:00-07:00"
@@ -222,7 +222,7 @@
           "all_day": true,
           "events": [
             {
-              "summary": "MTG: Commander",
+              "summary": "MTG Commander",
               "type": "league",
               "all_day": true,
               "starts_at": "2026-11-07T00:00:00-07:00"
