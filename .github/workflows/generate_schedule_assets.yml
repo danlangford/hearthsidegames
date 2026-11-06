@@ -57,9 +57,15 @@ jobs:
       - name: Show generated data diff
         run: git status --short pages/schedule/generated
 
-      - name: Install Pillow
+      - name: Install Pillow and emoji font
         if: steps.data_diff.outputs.changed == 'true'
-        run: python3 -m pip install pillow
+        run: |
+          # Noto Color Emoji renders emoji in event titles; fribidi enables
+          # Pillow's raqm layout so flags and multi-part emoji compose correctly.
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends fonts-noto-color-emoji libfribidi0
+          python3 -m pip install pillow
+          python3 -c "from PIL import features; assert features.check('raqm'), 'Pillow raqm layout unavailable'"
 
       - name: Transform JSON to PNG
         if: steps.data_diff.outputs.changed == 'true' && steps.data_diff.outputs.weekly_changed == 'true'
