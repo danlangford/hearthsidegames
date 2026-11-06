@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
 import io
+import os
 import sys
 from datetime import date
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, features
 
 from schedule_common import (
     OUTPUT_DIR,
@@ -31,7 +32,8 @@ MONTH_ABBR = [
 ]
 
 FONT_PATH = ROOT / "pages" / "HearthLexendExaVF.ttf"
-LOGO_PATH = ROOT / "pages" / "favicon.png"
+# Raster of pages/flame-deck-compat.svg (black on transparent) for the image header.
+LOGO_PATH = ROOT / "pages" / "flame-deck-logo.png"
 
 SOCIAL_LAYOUT = {
     "name": "social",
@@ -75,11 +77,13 @@ TV_LAYOUT = {
     "show_brand": False,
     "show_address": False,
     "show_store_name": False,
+    # Each day row shows its own date, and spotlight titles are set in a heavier
+    # weight instead of relying on a legend, so the TV header is just the title.
+    "show_range": False,
+    "show_legend": False,
     "header_label_y": 26,
-    "header_range_y": 98,
-    "legend_y": 144,
-    "row_top": 188,
-    "footer_top": 1048,
+    "row_top": 100,
+    "footer_top": 1056,
     "left_pad": 40,
     "right_pad": 40,
     "day_x": 44,
@@ -87,8 +91,8 @@ TV_LAYOUT = {
     "event_title_x": 328,
     "divider_left": 36,
     "divider_right": 36,
-    "day_pad_top": 12,
-    "day_pad_bottom": 18,
+    "day_pad_top": 10,
+    "day_pad_bottom": 12,
     "event_pad_top": 14,
     "event_gap": 24,
     "empty_day_height": 76,
@@ -108,6 +112,7 @@ TV_LAYOUT = {
         "date": 25,
         "time": 24,
         "event": 29,
+        "event_spotlight": (29, 600),
         "meta": 18,
         "no_events": 28,
         "brand": 20,
@@ -115,12 +120,244 @@ TV_LAYOUT = {
 }
 
 
-def load_font(size):
-    return ImageFont.truetype(str(FONT_PATH), size=size)
+def load_font(size, weight=None):
+    # Pin the basic layout engine so brand text renders the same whether or not
+    # raqm is available (raqm is only needed for the emoji font).
+    font = ImageFont.truetype(str(FONT_PATH), size=size, layout_engine=ImageFont.Layout.BASIC)
+    if weight is not None:
+        font.set_variation_by_axes([weight])  # variable font: single wght axis, 100-900
+    return font
+
+
+# --- Emoji support -----------------------------------------------------------
+#
+# The brand font has no emoji glyphs and Pillow does no font fallback, so text is
+# split into plain runs and emoji clusters. Emoji are drawn from a color bitmap
+# font (Noto Color Emoji on CI, Apple Color Emoji on macOS), scaled to the line,
+# and pasted onto the image.
+
+EMOJI_FONT_CANDIDATES = [
+    os.environ.get("EMOJI_FONT_PATH", ""),
+    "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf",
+    "/usr/share/fonts/noto/NotoColorEmoji.ttf",
+    "/System/Library/Fonts/Apple Color Emoji.ttc",
+]
+# Color bitmap fonts only load at the sizes of their embedded strikes.
+EMOJI_FONT_SIZES = (109, 160, 96, 64)
+EMOJI_SCALE = 1.0  # emoji box size relative to the font size
+EMOJI_GAP_RATIO = 0.08  # extra breathing room on each side of an emoji
+
+ZWJ = "‍"
+VS16 = "️"
+VS15 = "︎"
+KEYCAP = "⃣"
+
+
+def _is_regional_indicator(char):
+    return 0x1F1E6 <= ord(char) <= 0x1F1FF
+
+
+def _is_emoji_modifier(char):
+    return 0x1F3FB <= ord(char) <= 0x1F3FF
+
+
+def _is_tag(char):
+    return 0xE0020 <= ord(char) <= 0xE007F
+
+
+def _is_pictographic(char):
+    cp = ord(char)
+    return (
+        0x1F000 <= cp <= 0x1FAFF
+        or 0x2600 <= cp <= 0x27BF
+        or 0x2300 <= cp <= 0x23FF
+        or 0x2B00 <= cp <= 0x2BFF
+        or 0x2190 <= cp <= 0x21FF
+        or 0x25A0 <= cp <= 0x25FF
+        or 0x2900 <= cp <= 0x297F
+        or cp in (0x00A9, 0x00AE, 0x203C, 0x2049, 0x2122, 0x2139, 0x3030, 0x303D, 0x3297, 0x3299)
+    )
+
+
+def split_emoji_runs(text):
+    """Split text into [(is_emoji, segment)] keeping emoji sequences intact."""
+    runs = []
+    plain = []
+    i = 0
+    n = len(text)
+
+    def flush_plain():
+        if plain:
+            runs.append((False, "".join(plain)))
+            plain.clear()
+
+    while i < n:
+        char = text[i]
+        nxt = text[i + 1] if i + 1 < n else ""
+
+        # Keycaps: 1️⃣ #️⃣ *️⃣
+        if char in "0123456789#*" and (nxt == KEYCAP or (nxt == VS16 and text[i + 2 : i + 3] == KEYCAP)):
+            end = i + (2 if nxt == KEYCAP else 3)
+            flush_plain()
+            runs.append((True, text[i:end]))
+            i = end
+            continue
+
+        # Flags: pairs of regional indicators
+        if _is_regional_indicator(char):
+            end = i + 2 if nxt and _is_regional_indicator(nxt) else i + 1
+            flush_plain()
+            runs.append((True, text[i:end]))
+            i = end
+            continue
+
+        is_text_symbol = nxt == VS15
+        is_emoji_start = not is_text_symbol and (
+            0x1F000 <= ord(char) <= 0x1FAFF or (_is_pictographic(char) and (nxt == VS16 or not _brand_has_glyph(char)))
+        )
+        if not is_emoji_start:
+            plain.append(char)
+            i += 1
+            if is_text_symbol:
+                i += 1  # drop VS15; the brand font draws the text form
+            continue
+
+        end = i + 1
+        while end < n:
+            c = text[end]
+            if c == VS16 or _is_emoji_modifier(c) or _is_tag(c) or c == KEYCAP:
+                end += 1
+            elif c == ZWJ and end + 1 < n:
+                end += 2
+            else:
+                break
+        flush_plain()
+        runs.append((True, text[i:end]))
+        i = end
+
+    flush_plain()
+    return runs
+
+
+def split_clusters(text):
+    """Split text into user-visible units (characters, with emoji kept whole)."""
+    clusters = []
+    for is_emoji, segment in split_emoji_runs(text):
+        if is_emoji:
+            clusters.append(segment)
+        else:
+            clusters.extend(segment)
+    return clusters
+
+
+_glyph_cache = {}
+
+
+def _render_probe(char):
+    font = load_font(32)
+    probe = Image.new("L", (64, 64), 0)
+    ImageDraw.Draw(probe).text((8, 8), char, fill=255, font=font)
+    return probe.tobytes()
+
+
+def _brand_has_glyph(char):
+    """True when the brand font draws something other than its missing-glyph box."""
+    if char not in _glyph_cache:
+        if "missing" not in _glyph_cache:
+            _glyph_cache["missing"] = _render_probe("\U0010FFFD")
+        _glyph_cache[char] = _render_probe(char) != _glyph_cache["missing"]
+    return _glyph_cache[char]
+
+
+_emoji_font = None
+_emoji_font_loaded = False
+
+
+def get_emoji_font():
+    global _emoji_font, _emoji_font_loaded
+    if _emoji_font_loaded:
+        return _emoji_font
+    _emoji_font_loaded = True
+    # Raqm (complex text layout) is needed to compose flags, keycaps, skin tones
+    # and ZWJ sequences into single glyphs. Pillow's wheels bundle it but need
+    # the system fribidi library (apt: libfribidi0, brew: fribidi).
+    if features.check("raqm"):
+        layout_engine = ImageFont.Layout.RAQM
+    else:
+        layout_engine = ImageFont.Layout.BASIC
+        print(
+            "WARNING: Pillow raqm layout unavailable (install fribidi); "
+            "flags and multi-part emoji will not render.",
+            file=sys.stderr,
+        )
+    for path in EMOJI_FONT_CANDIDATES:
+        if not path or not Path(path).exists():
+            continue
+        for size in EMOJI_FONT_SIZES:
+            try:
+                _emoji_font = ImageFont.truetype(path, size=size, layout_engine=layout_engine)
+                print(f"Using emoji font: {path} @ {size}px")
+                return _emoji_font
+            except OSError:
+                continue
+    print("WARNING: no color emoji font found; emoji will be skipped in images.", file=sys.stderr)
+    return None
+
+
+_emoji_image_cache = {}
+
+
+def render_emoji(sequence, box_size):
+    key = (sequence, box_size)
+    if key in _emoji_image_cache:
+        return _emoji_image_cache[key]
+
+    font = get_emoji_font()
+    result = None
+    if font is not None:
+        strike = font.size
+        canvas = Image.new("RGBA", (strike * 3, strike * 2), (0, 0, 0, 0))
+        ImageDraw.Draw(canvas).text((strike // 2, strike // 2), sequence, font=font, embedded_color=True)
+        bbox = canvas.getbbox()
+        if bbox:
+            glyph = canvas.crop(bbox)
+            scale = box_size / max(glyph.width, glyph.height, strike * 0.9)
+            size = (max(1, round(glyph.width * scale)), max(1, round(glyph.height * scale)))
+            result = glyph.resize(size, Image.LANCZOS)
+
+    _emoji_image_cache[key] = result
+    return result
+
+
+def emoji_advance(font):
+    box = round(font.size * EMOJI_SCALE)
+    gap = round(font.size * EMOJI_GAP_RATIO)
+    return box, gap, box + gap * 2
+
+
+def draw_emoji(draw, x, y, sequence, font):
+    """Draw an emoji whose layout box starts at (x, y) as a text top-left anchor."""
+    box, gap, _advance = emoji_advance(font)
+    glyph = render_emoji(sequence, box)
+    if glyph is None:
+        return
+    # Center the emoji on the cap-height band of the brand font.
+    ascent, _descent = font.getmetrics()
+    cap_top = font.getbbox("H")[1]
+    band_mid = (cap_top + ascent) / 2
+    px = round(x + gap + (box - glyph.width) / 2)
+    py = round(y + band_mid - glyph.height / 2)
+    # ImageDraw keeps the target image here; paste the RGBA glyph with its alpha.
+    draw._image.alpha_composite(glyph, (max(px, 0), max(py, 0)))
 
 
 def build_fonts(layout):
-    return {name: load_font(size) for name, size in layout["fonts"].items()}
+    """Each font spec is a size or a (size, weight) pair."""
+    fonts = {}
+    for name, spec in layout["fonts"].items():
+        size, weight = spec if isinstance(spec, tuple) else (spec, None)
+        fonts[name] = load_font(size, weight)
+    return fonts
 
 
 def make_background(width, height):
@@ -136,34 +373,49 @@ def make_background(width, height):
 
 
 def fit_text(draw, text, font, max_width):
-    value = text
-    while value and draw.textlength(value, font=font) > max_width:
-        value = value[:-2].rstrip() + "…"
-    return value or text
+    return fit_text_tracking(draw, text, font, max_width, 0)
+
+
+def has_emoji(text):
+    return any(is_emoji for is_emoji, _segment in split_emoji_runs(text))
+
+
+def cluster_width(draw, cluster, font, is_emoji):
+    if is_emoji:
+        return emoji_advance(font)[2]
+    return draw.textlength(cluster, font=font)
 
 
 def text_width(draw, text, font, tracking=0):
     if not text:
         return 0
+    if not has_emoji(text):
+        if not tracking:
+            return draw.textlength(text, font=font)
+        return sum(draw.textlength(char, font=font) for char in text) + tracking * (len(text) - 1)
+
+    runs = split_emoji_runs(text)
     if not tracking:
-        return draw.textlength(text, font=font)
-    width = 0
-    for index, char in enumerate(text):
-        width += draw.textlength(char, font=font)
-        if index < len(text) - 1:
-            width += tracking
-    return width
+        return sum(cluster_width(draw, segment, font, is_emoji) for is_emoji, segment in runs)
+    clusters = [(is_emoji, c) for is_emoji, segment in runs for c in ([segment] if is_emoji else segment)]
+    return sum(cluster_width(draw, c, font, is_emoji) for is_emoji, c in clusters) + tracking * (len(clusters) - 1)
 
 
 def fit_text_tracking(draw, text, font, max_width, tracking=0):
-    value = text
-    while value and text_width(draw, value, font, tracking) > max_width:
-        value = value[:-2].rstrip() + "…"
-    return value or text
+    clusters = split_clusters(text)
+    if text_width(draw, text, font, tracking) <= max_width:
+        return text
+    while clusters:
+        clusters = clusters[:-1]
+        value = "".join(clusters).rstrip() + "…"
+        if text_width(draw, value, font, tracking) <= max_width:
+            return value
+    return text
 
 
 def draw_text_tracking(draw, position, text, font, fill, tracking=0, anchor=None):
-    if not tracking:
+    emoji = has_emoji(text)
+    if not tracking and not emoji:
         draw.text(position, text, fill=fill, font=font, anchor=anchor)
         return
 
@@ -174,9 +426,17 @@ def draw_text_tracking(draw, position, text, font, fill, tracking=0, anchor=None
         x -= text_width(draw, text, font, tracking)
 
     cursor = x
-    for char in text:
-        draw.text((cursor, y), char, fill=fill, font=font)
-        cursor += draw.textlength(char, font=font) + tracking
+    for is_emoji, segment in split_emoji_runs(text):
+        if is_emoji:
+            draw_emoji(draw, cursor, y, segment, font)
+            cursor += cluster_width(draw, segment, font, True) + tracking
+        elif not tracking:
+            draw.text((cursor, y), segment, fill=fill, font=font)
+            cursor += draw.textlength(segment, font=font)
+        else:
+            for char in segment:
+                draw.text((cursor, y), char, fill=fill, font=font)
+                cursor += draw.textlength(char, font=font) + tracking
 
 
 def format_range(start_date, end_date):
@@ -304,7 +564,7 @@ def draw_header(image, draw, payload, layout, fonts):
     if layout.get("show_logo") and LOGO_PATH.exists():
         logo_size = layout["logo_size"]
         logo = Image.open(LOGO_PATH).convert("RGBA")
-        logo = logo.resize((logo_size, logo_size))
+        logo = logo.resize((logo_size, logo_size), Image.LANCZOS)
         image.alpha_composite(logo, ((width - logo_size) // 2, 28))
 
     if layout.get("show_store_name", True):
@@ -326,15 +586,19 @@ def draw_header(image, draw, payload, layout, fonts):
         anchor="ma",
         tracking=tracking.get("title", 0),
     )
-    draw_text_tracking(
-        draw,
-        (width / 2, layout["header_range_y"]),
-        f"{format_range(start_date, end_date)}, {start_date.year}",
-        fill=(77, 71, 64),
-        font=fonts["subtitle"],
-        anchor="ma",
-        tracking=tracking.get("subtitle", 0),
-    )
+    if layout.get("show_range", True):
+        draw_text_tracking(
+            draw,
+            (width / 2, layout["header_range_y"]),
+            f"{format_range(start_date, end_date)}, {start_date.year}",
+            fill=(77, 71, 64),
+            font=fonts["subtitle"],
+            anchor="ma",
+            tracking=tracking.get("subtitle", 0),
+        )
+
+    if not layout.get("show_legend", True):
+        return
 
     legend_y = layout["legend_y"]
     draw.ellipse((width / 2 - 122, legend_y, width / 2 - 112, legend_y + 10), fill=(191, 87, 0))
@@ -461,10 +725,11 @@ def draw_schedule_rows(draw, payload, layout, fonts):
                         draw.rectangle((marker_x, marker_top, marker_x + 9, marker_bottom), fill=dot_color)
                     else:
                         draw.ellipse((marker_x, marker_top, marker_x + 9, marker_bottom), fill=dot_color)
+                    title_font = fonts.get("event_spotlight", fonts["event"]) if is_special else fonts["event"]
                     title = fit_text_tracking(
                         draw,
                         event["summary"],
-                        fonts["event"],
+                        title_font,
                         width - marker_x - layout["right_pad"] - 22,
                         tracking.get("event", 0),
                     )
@@ -473,7 +738,7 @@ def draw_schedule_rows(draw, payload, layout, fonts):
                         (marker_x + 18, ey),
                         title,
                         fill=name_color,
-                        font=fonts["event"],
+                        font=title_font,
                         tracking=tracking.get("event", 0),
                     )
                     previous_time_label = event["time_label"]
@@ -533,7 +798,7 @@ def draw_schedule_rows(draw, payload, layout, fonts):
                     fonts["event"],
                     width - layout["event_title_x"] - layout["right_pad"],
                 )
-                draw.text((layout["event_title_x"], ey), title, fill=name_color, font=fonts["event"])
+                draw_text_tracking(draw, (layout["event_title_x"], ey), title, fill=name_color, font=fonts["event"])
 
         y += row_height
 
