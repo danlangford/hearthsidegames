@@ -2,7 +2,7 @@
   "label": "Next Week",
   "start": "2026-11-16",
   "end": "2026-11-22",
-  "event_count": 24,
+  "event_count": 25,
   "days": [
     {
       "date": "2026-11-16",
@@ -284,6 +284,19 @@
               "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-11-22T14:00:00-07:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Mahjong \ud83c\udded\ud83c\uddf0\ud83c\uddfa\ud83c\uddf8",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-11-22T18:00:00-07:00"
             }
           ]
         },
