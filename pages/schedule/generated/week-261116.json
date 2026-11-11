@@ -9,19 +9,6 @@
       "weekday": "MON",
       "groups": [
         {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Chess open play w/PowerChess",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-16T18:00:00-07:00"
-            }
-          ]
-        },
-        {
           "time_sort_key": "19:00",
           "time_label": "7 PM",
           "all_day": false,
@@ -51,6 +38,12 @@
           "time_label": "6 PM",
           "all_day": false,
           "events": [
+            {
+              "summary": "Chess open play w/PowerChess",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-17T18:00:00-07:00"
+            },
             {
               "summary": "Cyberpunk TCG",
               "type": "league",
