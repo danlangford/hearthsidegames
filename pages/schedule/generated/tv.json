@@ -1,47 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-11-18",
-  "end": "2026-11-25",
-  "event_count": 27,
+  "start": "2026-11-19",
+  "end": "2026-11-26",
+  "event_count": 28,
   "days": [
-    {
-      "date": "2026-11-18",
-      "weekday": "WED",
-      "groups": [
-        {
-          "time_sort_key": "18:00",
-          "time_label": "6 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Pok\u00e9mon - Challenge",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-18T18:00:00-07:00"
-            }
-          ]
-        },
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana Beauty and The Beast Series",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-18T19:00:00-07:00"
-            },
-            {
-              "summary": "MTG: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-18T19:00:00-07:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-11-19",
       "weekday": "THU",
@@ -328,6 +290,50 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-11-25T19:00:00-07:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "weekday": "THU",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Warlord & Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-26T18:00:00-07:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Digimon",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-26T19:00:00-07:00"
+            },
+            {
+              "summary": "One piece Op18 Release Event",
+              "type": "spotlight",
+              "all_day": false,
+              "starts_at": "2026-11-26T19:00:00-07:00"
+            },
+            {
+              "summary": "One Piece: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-11-26T19:00:00-07:00"
             }
           ]
         }
