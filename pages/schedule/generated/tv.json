@@ -89,7 +89,7 @@
           "all_day": false,
           "events": [
             {
-              "summary": "Lorcana Beauty and The Beast Series",
+              "summary": "Lorcana Play and Trade",
               "type": "league",
               "all_day": false,
               "starts_at": "2026-11-25T19:00:00-07:00"
@@ -108,6 +108,19 @@
       "date": "2026-11-26",
       "weekday": "THU",
       "groups": [
+        {
+          "time_sort_key": "ALL_DAY",
+          "time_label": "ALL DAY",
+          "all_day": true,
+          "events": [
+            {
+              "summary": "THANKSGIVING",
+              "type": "spotlight",
+              "all_day": true,
+              "starts_at": "2026-11-26T00:00:00-07:00"
+            }
+          ]
+        },
         {
           "time_sort_key": "18:00",
           "time_label": "6 PM",
@@ -135,12 +148,6 @@
             {
               "summary": "One piece Op18 Release Event",
               "type": "spotlight",
-              "all_day": false,
-              "starts_at": "2026-11-26T19:00:00-07:00"
-            },
-            {
-              "summary": "One Piece: Standard",
-              "type": "league",
               "all_day": false,
               "starts_at": "2026-11-26T19:00:00-07:00"
             }
@@ -210,15 +217,15 @@
           ]
         },
         {
-          "time_sort_key": "11:00",
-          "time_label": "11 AM",
+          "time_sort_key": "10:00",
+          "time_label": "10 AM",
           "all_day": false,
           "events": [
             {
               "summary": "Disney Lorcana - Attack Of The Vine $1K",
               "type": "spotlight",
               "all_day": false,
-              "starts_at": "2026-11-28T11:00:00-07:00"
+              "starts_at": "2026-11-28T10:00:00-07:00"
             }
           ]
         },
@@ -241,14 +248,14 @@
           "all_day": false,
           "events": [
             {
-              "summary": "",
-              "type": "spotlight",
+              "summary": "MTG Draft",
+              "type": "league",
               "all_day": false,
               "starts_at": "2026-11-28T19:00:00-07:00"
             },
             {
-              "summary": "MTG Draft",
-              "type": "league",
+              "summary": "One piece OP-18 Release Event",
+              "type": "spotlight",
               "all_day": false,
               "starts_at": "2026-11-28T19:00:00-07:00"
             },
