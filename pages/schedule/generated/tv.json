@@ -1,34 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-11-23",
-  "end": "2026-11-30",
-  "event_count": 28,
+  "start": "2026-11-24",
+  "end": "2026-12-01",
+  "event_count": 31,
   "days": [
-    {
-      "date": "2026-11-23",
-      "weekday": "MON",
-      "groups": [
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-23T19:00:00-07:00"
-            },
-            {
-              "summary": "Riftbound",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-23T19:00:00-07:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-11-24",
       "weekday": "TUE",
@@ -334,6 +309,56 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-11-30T19:00:00-07:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-12-01",
+      "weekday": "TUE",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Chess open play w/PowerChess",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-12-01T18:00:00-07:00"
+            },
+            {
+              "summary": "Cyberpunk TCG",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-12-01T18:00:00-07:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Dragon Ball Super Fusion World",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-12-01T19:00:00-07:00"
+            },
+            {
+              "summary": "Union Arena",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-12-01T19:00:00-07:00"
+            },
+            {
+              "summary": "Warhammer & StarCraft TMG",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-12-01T19:00:00-07:00"
             }
           ]
         }
