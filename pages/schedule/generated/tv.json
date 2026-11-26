@@ -1,34 +1,9 @@
 {
   "label": "Upcoming Events",
-  "start": "2026-11-25",
-  "end": "2026-12-02",
-  "event_count": 29,
+  "start": "2026-11-26",
+  "end": "2026-12-03",
+  "event_count": 30,
   "days": [
-    {
-      "date": "2026-11-25",
-      "weekday": "WED",
-      "groups": [
-        {
-          "time_sort_key": "19:00",
-          "time_label": "7 PM",
-          "all_day": false,
-          "events": [
-            {
-              "summary": "Lorcana Play and Trade",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-25T19:00:00-07:00"
-            },
-            {
-              "summary": "MTG: Standard",
-              "type": "league",
-              "all_day": false,
-              "starts_at": "2026-11-25T19:00:00-07:00"
-            }
-          ]
-        }
-      ]
-    },
     {
       "date": "2026-11-26",
       "weekday": "THU",
@@ -347,6 +322,44 @@
               "type": "league",
               "all_day": false,
               "starts_at": "2026-12-02T19:00:00-07:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "weekday": "THU",
+      "groups": [
+        {
+          "time_sort_key": "18:00",
+          "time_label": "6 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Warlord & Netrunner",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-12-03T18:00:00-07:00"
+            }
+          ]
+        },
+        {
+          "time_sort_key": "19:00",
+          "time_label": "7 PM",
+          "all_day": false,
+          "events": [
+            {
+              "summary": "Digimon",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-12-03T19:00:00-07:00"
+            },
+            {
+              "summary": "One Piece: Standard",
+              "type": "league",
+              "all_day": false,
+              "starts_at": "2026-12-03T19:00:00-07:00"
             }
           ]
         }
